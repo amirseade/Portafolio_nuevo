@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Diseñador Freelancer</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="contenedor-header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="nombre">Amir Seade</h1>
+            <span class="marca">JASDEV</span>
+            <nav class="navegacion">
+                <a href="#">Inicio</a>
+                <a href="#">Nosotros</a>
+                <a href="#">Clientes</a>
+                <a href="#">Contactos</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <div class="hero">
+        <div class="contenido-hero">
+            <h2>Diseño y Desarrollo Web Freelancer</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88"
+                    height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" />
+                    <circle cx="12" cy="11" r="3" />
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
+                </svg>Santiago del Estero, Argentina</p>
+
+            <a class="boton" href="#contacto">Contactar</a>
+        </div>
+    </div>
+
+    <div class="contenedor sombra">
+        <h2>Mis Servicios</h2>
+        <main class="servicios">
+            <div class="servicio">
+                <h3>Diseño & Desarrollo Web</h3>
+                <div class="iconos">
+                    <img src="software-development.png" alt="" style="width: 54px; height: 54px;">
+                </div>
+                <p>-Diseño y desarrollo de aplicaciones Web con tecnologías HTML, CSS y JavaScript.</p>
+                <p>-Diseño responsive y adaptativo para dispositivos móviles y escritorio.</p>
+                <p>-Sitio web personalizado y optimizado</p>
+            </div>
+            <div class="servicio">
+                <h3>Inteligencia Artificial</h3>
+                <div class="iconos">
+
+                    <!-- https://tablericons.com/ -->
+                    <img src="chip-de-ia.png" alt="" style="width: 54px; height: 54px;">
+
+                </div>
+                <p>Ut congue ligula sapien, ac aliquet erat viverra a. Nulla rhoncus hendrerit fringilla. Mauris tempus
+                    sagittis libero, eget finibus sem aliquet eget.</p>
+            </div>
+            <div class="servicio">
+                <h3>E-Commerce </h3>
+                <div class="iconos">
+                    <img src="e-commerce.png" alt="" style="width: 54px; height: 54px; margin-left: 8px;">
+                </div>
+                <p>Ut congue ligula sapien, ac aliquet erat viverra a. Nulla rhoncus hendrerit fringilla. Mauris tempus
+                    sagittis libero, eget finibus sem aliquet eget.</p>
+            </div>
+        </main>
+
+        <div id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form class="formulario" action="#" method="POST">
+                <legend>Contactános llenando todos los campos</legend>
+
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label>Nombre</label>
+
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label>Teléfono</label>
+
+                        <input type="tel" name="telefono" placeholder="Teléfono">
+                    </div>
+                    <div class="campo w-100">
+                        <label>Correo</label>
+
+                        <input type="mail" name="correo" placeholder="Mail">
+                    </div>
+                    <div class="campo w-100">
+                        <label>Mensaje:</label>
+
+                        <textarea></textarea>
+                    </div>
+                </div><!--.contenedor-campos-->
+                <div class="enviar">
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados. Juan De la torre Freelancer</p>
+    </footer>
+
+
+
+</body>
+
+</html>
