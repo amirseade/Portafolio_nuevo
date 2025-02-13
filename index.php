@@ -16,7 +16,7 @@
 
     <header class="header">
         <div class="contenedor-header">
-            <img src="img/logo.png" alt="Logo" class="logo">
+            <img src="logo.png" alt="Logo" class="logo">
             <h1 class="nombre">Amir Seade</h1>
             <a href="index.html" style="text-decoration: none;"><span class="marca">JASDEV</span></a>
             <nav class="navegacion">
@@ -103,7 +103,7 @@
                         productos de manera fácil, todo desde una interfaz amigable y simple.</p>
 
                     <div class="imagenes-proyecto">
-                        <img src="img/Presentación Proyecto Web Elegante Minimalista Beige (2).png"
+                        <img src="img/martinikova.png"
                             alt="Proyecto 1 Imagen 1">
                     </div>
                     <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
