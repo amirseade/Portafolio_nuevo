@@ -80,8 +80,7 @@ p {
 }
 
 .navegacion a:hover {
-    background-color: var(--primario);
-    color: var(--oscuro);
+    color: var(--primario);
 }
 
 @media (min-width: 768px) {
@@ -177,8 +176,7 @@ h3 {
 }
 
 .navegacion a:hover {
-    background-color: var(--primario);
-    color: var(--oscuro);
+    color: var(--blanco);
 }
 
 .navegacion a:last-of-type {
@@ -189,11 +187,12 @@ h3 {
     .navegacion a {
         margin-bottom: 0;
     }
+    
 }
 
 .hero {
     height: 450px;
-    background-image: url(/img/hero.jpg);
+    background-image: url(../img/hero.jpg);
     background-size: cover;
     margin-bottom: 2rem;
     position: relative;
@@ -431,6 +430,7 @@ footer i {
     .proyectos {
         grid-template-columns: 1fr 1fr;
         /* Dos columnas para pantallas más grandes */
+        width: 100%;
     }
 }
 
@@ -470,7 +470,7 @@ footer i {
 }
 
 .navegacion a.activo:hover {
-    color: var(--oscuro);
+    color: var(--primario);
     font-weight: 700;
     border-bottom: 2px solid var(--primario);
     /* Puedes usar un subrayado para resaltar el activo */
