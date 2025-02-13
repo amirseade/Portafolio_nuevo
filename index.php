@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Diseñador Freelancer</title>
+    <title>JASDEV</title>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -113,7 +114,7 @@
 
                 <div class="proyecto">
                     <h3>Sistema Directores: Gestión Docente</h3>
-                    <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la provincia. Permite gestionar el personal docente, realizar un seguimiento de la asistencia y desempeño.</p>
+                    <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la provincia.Desarrollo desde la Direccion general  de Informatica de Santiagogo del Estero (DGISE)</p>
                     <div class="imagenes-proyecto">
                         <img src="img/directores.png" alt="Proyecto 2 Imagen 1" style="margin-top: 11rem;">
                     </div>
