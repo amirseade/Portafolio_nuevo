@@ -532,56 +532,76 @@ footer i {
 
     /* Estilo para el contenedor del header */
     .contenedor-header {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        flex-direction: row; /* Cambio de columna a fila */
+        justify-content: space-between; /* Espacio entre el logo, el nombre y el nav */
+        align-items: center; /* Alineación en el centro */
+        padding: 10px;
     }
 
-    /* Ajuste de la navegación para que sea vertical y ocupe toda la pantalla */
+    /* Ajuste de la navegación para que esté en fila */
     .navegacion {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: var(--secundario);
-        text-align: center;
-        width: 100%;
+        display: flex; /* Usamos flex para poner los items en fila */
+        flex-direction: column;
+        gap: 15px; /* Espacio entre los enlaces */
+        margin-top: 0;
+        margin-left: 20px; /* Margen entre el logo y la navegación */
     }
 
     .navegacion a {
-        display: block;
-        padding: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem; /* Un tamaño adecuado para dispositivos móviles */
         color: var(--blanco);
         text-decoration: none;
     }
 
-    /* Ajustes de la barra de búsqueda en dispositivos móviles */
-    .barra-busqueda {
-        width: 100%;
-        margin-top: 10px;
-        padding: 8px;
-        font-size: 1rem;
-        border-radius: 5px;
+    /* Ajuste de la altura y visibilidad del banner */
+    .hero {
+        height: 400px; /* Aseguramos que el banner no quede oculto */
+        background-size: cover;
+        background-position: center;
     }
-    
-    /* Ajustes del nombre y la marca */
-    .nombre, .marca {
+
+    .contenido-hero {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+    }
+
+    .contenido-hero h2 {
+        font-size: 1.8rem; /* Tamaño más pequeño para dispositivos móviles */
+        margin: 0 10px;
+    }
+
+    .contenido-hero p {
+        font-size: 1rem;
+    }
+
+    .boton {
+        font-size: 1rem;
+        padding: 10px 15px;
+        margin-top: 15px;
+    }
+
+    /* Ajustes para los servicios */
+    .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .servicio h3 {
         font-size: 1.2rem;
     }
-    
-    /* Estilo para el ícono de menú (hamburger) en dispositivos móviles */
-    .hamburger {
-        display: block;
-        cursor: pointer;
+
+    .servicio ul {
+        font-size: 0.9rem;
     }
-    
-    .hamburger span {
-        background-color: #fff;
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px 0;
+
+    .imagenes-proyecto img {
+        width: 100%;
+        height: auto;
     }
 }
