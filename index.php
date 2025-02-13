@@ -158,7 +158,7 @@
 
     <footer>
         <!-- Pie de página -->
-        <p>&copy; 2025 JASDEV 
+        <p>&copy;2025 JASDEV 
             <a href="https://www.instagram.com/amirseade" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
             </a> 

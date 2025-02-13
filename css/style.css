@@ -378,40 +378,7 @@ h3 {
     justify-content: flex-end;
 }
 
-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-    font-size: 1rem;
-}
 
-footer p {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    gap: 10px;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para los iconos */
-footer i {
-    margin-right: 5px;
-    font-size: 14px;
-}
 
 
 /* Estilo para la sección de proyectos */
@@ -646,27 +613,79 @@ footer i {
         margin-top: 11rem;
     }
 
-    /* Ajustes del footer */
-    .footer {
-        display: grid; /* Usamos grid para organizar en columnas */
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajustamos el número de columnas automáticamente */
-        gap: 20px; /* Espaciado entre columnas */
-        align-items: center; /* Centrado de contenido */
-        justify-content: center;
-        text-align: center;
+}
+
+
+/* Estilo del pie de página */
+footer {
+    background-color: var(--oscuro); /* Color de fondo personalizado */
+    color: #fff; /* Color de texto blanco */
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 3rem;
+    border-top: 2px solid #fff;
+}
+
+/* Enlaces dentro del footer */
+footer a {
+    color: #fff; /* Color blanco por defecto */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffb847; /* Color dorado al pasar el mouse */
+}
+
+/* Estilo de los íconos de las redes sociales */
+footer i {
+    margin-right: 8px;
+}
+
+/* Mejoras para pantallas móviles */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
     }
 
-    /* Estilos adicionales en los elementos del footer */
-    .footer p {
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        display: block; /* Los enlaces se apilan en móviles */
+        margin: 0.5rem 0;
+    }
+
+    footer i {
+        margin-right: 5px;
+    }
+}
+
+/* Mejoras para pantallas grandes (PC) */
+@media (min-width: 769px) {
+    footer {
+        display: flex;
+        justify-content: center; /* Centrar los elementos */
+        align-items: center;
         font-size: 1rem;
     }
 
-    .footer a {
-        color: var(--blanco);
-        text-decoration: none;
+    footer p {
+        margin: 0;
+        text-align: left;
     }
 
-    .footer i {
+    footer a {
+        margin: 0 1rem;
+        font-size: 1.2rem;
+    }
+
+    footer i {
         margin-right: 8px;
     }
 }
