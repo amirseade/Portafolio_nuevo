@@ -414,52 +414,96 @@ footer i {
 }
 
 
-/* Estilos para la sección de proyectos */
+/* Estilo para la sección de proyectos */
+#proyectos {
+    margin-top: 1rem;
+    padding: 3rem;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+}
+
 .proyectos {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
     display: grid;
-    grid-template-columns: 1fr;
-    /* Una columna por defecto */
-    gap: 2rem;
-    /* Espacio entre proyectos */
+    grid-template-columns: 1fr; /* Una sola columna para dispositivos pequeños */
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
-@media (min-width: 768px) {
-    .proyectos {
-        grid-template-columns: 1fr 1fr;
-        /* Dos columnas para pantallas más grandes */
-        width: 100%;
-    }
-}
-
-/* Estilos para cada proyecto */
 .proyecto {
     background-color: rgb(255, 255, 255);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 10px;
     -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     text-align: center;
+    width: 100%;
 }
 
-/* Títulos de proyectos */
 .proyecto h3 {
     color: var(--secundario);
-    font-size: 1.8rem;
+    font-size: 1.6rem; /* Reducir tamaño de título para móviles */
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-
-/* Descripción de proyectos */
 .proyecto p {
     color: var(--gris);
-    font-size: 1.2rem;
+    font-size: 1rem; /* Ajuste de tamaño de fuente */
     margin-bottom: 1rem;
 }
+
+.imagenes-proyecto {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.imagenes-proyecto img {
+    width: 100%; /* Las imágenes ocuparán el 100% del contenedor */
+    max-width: 350px; /* Establecer un tamaño máximo para las imágenes */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mejoras específicas para pantallas móviles */
+@media (max-width: 768px) {
+    #proyectos {
+        padding: 2rem;
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr; /* Asegura que los proyectos estén en una sola columna */
+        gap: 1.5rem;
+    }
+
+    .proyecto {
+        padding: 1rem;
+    }
+
+    .proyecto h3 {
+        font-size: 1.5rem; /* Ajustamos el tamaño del título */
+    }
+
+    .proyecto p {
+        font-size: 1rem; /* Reducimos el tamaño del texto */
+    }
+
+    .imagenes-proyecto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .boton {
+        padding: 0.5rem 2rem; /* Ajustar el tamaño del botón para pantallas pequeñas */
+        font-size: 1rem;
+    }
+}
+
 
 /* Estilo para el enlace activo */
 .navegacion a.activo {
