@@ -28,10 +28,14 @@ p {
 .header {
     background-color: black;
     padding: 10px 0;
-    position: fixed; /* Asegura que se quede fijo en la parte superior */
-    top: 0; /* Asegura que se quede en la parte superior */
-    width: 100%; /* Hace que el navbar ocupe todo el ancho */
-    z-index: 1; /* Asegura que se quede por encima de otros elementos */
+    position: fixed;
+    /* Asegura que se quede fijo en la parte superior */
+    top: 0;
+    /* Asegura que se quede en la parte superior */
+    width: 100%;
+    /* Hace que el navbar ocupe todo el ancho */
+    z-index: 1;
+    /* Asegura que se quede por encima de otros elementos */
 }
 
 
@@ -123,6 +127,7 @@ h3 {
     margin: 0 auto;
     max-width: 1200px;
 }
+
 .contenedor h2 {
     text-align: center;
     margin-top: 4.3rem;
@@ -245,9 +250,10 @@ h3 {
 .servicio {
     text-align: center;
 }
-.servicio ul {  
-text-align: left;
-line-height: 1.5rem;
+
+.servicio ul {
+    text-align: left;
+    line-height: 1.5rem;
 }
 
 .servicio li:first-of-type {
@@ -414,14 +420,17 @@ footer i {
     scroll-snap-align: center;
     scroll-snap-stop: always;
     display: grid;
-    grid-template-columns: 1fr; /* Una columna por defecto */
-    gap: 2rem; /* Espacio entre proyectos */
+    grid-template-columns: 1fr;
+    /* Una columna por defecto */
+    gap: 2rem;
+    /* Espacio entre proyectos */
     margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
     .proyectos {
-        grid-template-columns: 1fr 1fr; /* Dos columnas para pantallas más grandes */
+        grid-template-columns: 1fr 1fr;
+        /* Dos columnas para pantallas más grandes */
     }
 }
 
@@ -456,12 +465,15 @@ footer i {
 .navegacion a.activo {
     color: var(--primario);
     font-weight: 700;
-    border-bottom: 2px solid var(--primario); /* Puedes usar un subrayado para resaltar el activo */
+    border-bottom: 2px solid var(--primario);
+    /* Puedes usar un subrayado para resaltar el activo */
 }
+
 .navegacion a.activo:hover {
     color: var(--oscuro);
     font-weight: 700;
-    border-bottom: 2px solid var(--primario); /* Puedes usar un subrayado para resaltar el activo */
+    border-bottom: 2px solid var(--primario);
+    /* Puedes usar un subrayado para resaltar el activo */
 }
 
 
@@ -491,7 +503,7 @@ footer i {
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
 }
 
-.servicios{
+.servicios {
     margin-top: 1rem;
     padding: 3rem;
     background-color: rgba(245, 245, 245, 1);
@@ -524,6 +536,7 @@ footer i {
 
 /* Media Query para dispositivos móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
+
     /* Estilo para el logo en dispositivos móviles */
     .logo {
         max-height: 40px;
@@ -532,76 +545,84 @@ footer i {
 
     /* Estilo para el contenedor del header */
     .contenedor-header {
-        flex-direction: row; /* Cambio de columna a fila */
-        justify-content: space-between; /* Espacio entre el logo, el nombre y el nav */
-        align-items: center; /* Alineación en el centro */
-        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    /* Ajuste de la navegación para que esté en fila */
+    /* Ajuste de la navegación para que sea vertical y ocupe toda la pantalla */
     .navegacion {
-        display: flex; /* Usamos flex para poner los items en fila */
-        flex-direction: column;
-        gap: 15px; /* Espacio entre los enlaces */
-        margin-top: 0;
-        margin-left: 20px; /* Margen entre el logo y la navegación */
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--secundario);
+        text-align: center;
+        width: 100%;
     }
 
     .navegacion a {
-        font-size: 1rem; /* Un tamaño adecuado para dispositivos móviles */
+        display: block;
+        padding: 10px;
+        font-size: 1.2rem;
         color: var(--blanco);
         text-decoration: none;
     }
 
-    /* Ajuste de la altura y visibilidad del banner */
-    .hero {
-        height: 400px; /* Aseguramos que el banner no quede oculto */
-        background-size: cover;
-        background-position: center;
-    }
-
-    .contenido-hero {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-    }
-
-    .contenido-hero h2 {
-        font-size: 1.8rem; /* Tamaño más pequeño para dispositivos móviles */
-        margin: 0 10px;
-    }
-
-    .contenido-hero p {
+    /* Ajustes de la barra de búsqueda en dispositivos móviles */
+    .barra-busqueda {
+        width: 100%;
+        margin-top: 10px;
+        padding: 8px;
         font-size: 1rem;
+        border-radius: 5px;
     }
 
-    .boton {
-        font-size: 1rem;
-        padding: 10px 15px;
-        margin-top: 15px;
-    }
-
-    /* Ajustes para los servicios */
-    .servicios {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .servicio h3 {
+    /* Ajustes del nombre y la marca */
+    .nombre,
+    .marca {
         font-size: 1.2rem;
     }
 
-    .servicio ul {
-        font-size: 0.9rem;
+    /* Estilo para el ícono de menú (hamburger) en dispositivos móviles */
+    .hamburger {
+        display: block;
+        cursor: pointer;
     }
 
-    .imagenes-proyecto img {
-        width: 100%;
-        height: auto;
+    .hamburger span {
+        background-color: #fff;
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+    }
+    body{
+        margin-top: 11rem;
+    }
+
+    /* Ajustes del footer */
+    .footer {
+        display: grid; /* Usamos grid para organizar en columnas */
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajustamos el número de columnas automáticamente */
+        gap: 20px; /* Espaciado entre columnas */
+        align-items: center; /* Centrado de contenido */
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Estilos adicionales en los elementos del footer */
+    .footer p {
+        font-size: 1rem;
+    }
+
+    .footer a {
+        color: var(--blanco);
+        text-decoration: none;
+    }
+
+    .footer i {
+        margin-right: 8px;
     }
 }
