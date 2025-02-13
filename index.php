@@ -157,13 +157,13 @@
 
     <footer>
         <!-- Pie de página -->
-        <p>&copy; 2025 JASDEV |
+        <p>&copy; 2025 JASDEV 
             <a href="https://www.instagram.com/amirseade" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
-            </a> |
+            </a> 
             <a href="mailto:amirseade00@gmail.com" target="_blank">
                 <i class="fas fa-envelope"></i> amirseade00@gmail.com
-            </a> |
+            </a> 
             <a href="https://wa.me/3855724467" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
