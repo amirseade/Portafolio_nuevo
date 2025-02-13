@@ -16,7 +16,7 @@
 
     <header class="header">
         <div class="contenedor-header">
-            <img src="logo.png" alt="Logo" class="logo">
+            <img src="/img/logo.png" alt="Logo" class="logo">
             <h1 class="nombre">Amir Seade</h1>
             <a href="index.html" style="text-decoration: none;"><span class="marca">JASDEV</span></a>
             <nav class="navegacion">
