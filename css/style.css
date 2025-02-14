@@ -129,7 +129,7 @@ h3 {
 
 .contenedor h2 {
     text-align: center;
-    margin-top: 4.3rem;
+  
 }
 
 .contenedor p {
@@ -682,6 +682,28 @@ footer a:hover {
 /* Estilo de los íconos de las redes sociales */
 footer i {
     margin-right: 8px;
+}
+
+/* Mejoras para pantallas móviles */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    footer a {
+        display: block; /* Los enlaces se apilan en móviles */
+        margin: 0.5rem 0;
+    }
+
+    footer i {
+        margin-right: 5px;
+    }
+    
 }
 
 

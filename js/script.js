@@ -1,18 +1,17 @@
-// Seleccionamos todos los enlaces dentro de la navegación
+// Selecciona todos los enlaces de navegación
 const enlaces = document.querySelectorAll('.navegacion a');
 
-// Función que actualiza la clase 'activo' según la sección visible
 function actualizarActivo() {
     let posicionActual = window.scrollY;
 
-    // Comprobamos la posición de cada sección, que ahora son divs con id
-    document.querySelectorAll('div[id]').forEach((div, index) => {
+    // Comprobamos la posición de cada sección
+    document.querySelectorAll('section[id]').forEach((div, index) => {
         const enlace = enlaces[index];
         const offsetTop = div.offsetTop;
         const offsetHeight = div.offsetHeight;
 
         // Si la sección está en la vista
-        if (posicionActual >= offsetTop - 50 && posicionActual < offsetTop + offsetHeight - 50) {
+        if (posicionActual >= offsetTop - 60 && posicionActual < offsetTop + offsetHeight - 60) {
             // Eliminar la clase 'activo' de todos los enlaces
             enlaces.forEach(link => link.classList.remove('activo'));
             // Añadir la clase 'activo' al enlace correspondiente
@@ -21,8 +20,45 @@ function actualizarActivo() {
     });
 
     // Si llegamos al final de la página y estamos cerca de la última sección
-   
+    const finalPagina = document.documentElement.scrollHeight - window.innerHeight;
+    if (posicionActual >= finalPagina - 100) {  // Usamos un margen de 100 píxeles
+        // Asegurarse de que el enlace "Contacto" sea activo
+        enlaces.forEach(link => link.classList.remove('activo'));
+        enlaces[enlaces.length - 1].classList.add('activo');  // El último enlace es el de "Contacto"
+    }
 }
+
+// Modificar el desplazamiento al hacer clic en cualquier enlace de la barra de navegación
+enlaces.forEach(enlace => {
+    enlace.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+
+        // Obtener el id de la sección que corresponde al enlace clicado
+        const seccionId = enlace.getAttribute('href').substring(1);  // Eliminamos el # del href
+        const seccion = document.getElementById(seccionId);
+
+        // Comprobar si el enlace es el de "Contacto" para aplicar un ajuste diferente
+        if (seccionId === 'contacto') {
+            // Si es "Contacto", desplazamos -90px
+            window.scrollTo({
+                top: seccion.offsetTop - 170, // Ajuste especial para "Contacto"
+                behavior: 'smooth' // Desplazamiento suave
+            });
+        } else {
+            // Para las demás secciones, desplazamos -80px
+            window.scrollTo({
+                top: seccion.offsetTop - 80, // Ajuste estándar
+                behavior: 'smooth' // Desplazamiento suave
+            });
+        }
+    });
+});
+
+
+
+
+
+
 
 // Agregamos el evento de clic a cada enlace
 enlaces.forEach(enlace => {

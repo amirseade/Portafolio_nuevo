@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div id="habilidades" class="contenedor sombra">
+    <section id="habilidades" class="contenedor sombra">
         <h2>Mis Habilidades</h2>
         <main class="servicios">
             <div class="servicio">
@@ -86,12 +86,12 @@
                 </ul>
             </div>
         </main>
-    </div>
+</section>
 
 
 
     <!-- Mis Proyectos -->
-    <div class="contenedor sombra" id="proyectos">
+    <section class="contenedor sombra" id="proyectos">
         <h2>Mis Proyectos</h2>
         <main class="proyectos">
             <div class="proyecto">
@@ -122,10 +122,10 @@
             </div>
 
         </main>
-    </div>
+    </section>
 
 
-    <div id="contacto" class="contacto">
+    <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <form id="formularioContacto" class="formulario">
             <legend>Contactános llenando todos los campos</legend>
@@ -152,7 +152,7 @@
                 <input class="boton" type="submit" value="Enviar WhatsApp">
             </div>
         </form>
-    </div>
+    </section>
 
 
     </div>
