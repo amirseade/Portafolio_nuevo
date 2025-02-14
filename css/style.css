@@ -381,95 +381,7 @@ h3 {
 
 
 
-/* Estilo para la sección de proyectos */
-#proyectos {
-    margin-top: 1rem;
-    padding: 3rem;
-    background-color: rgba(245, 245, 245, 1);
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-}
 
-.proyectos {
-    display: grid;
-    grid-template-columns: 1fr; /* Una sola columna para dispositivos pequeños */
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.proyecto {
-    background-color: rgb(255, 255, 255);
-    padding: 1rem;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    text-align: center;
-    width: 100%;
-}
-
-.proyecto h3 {
-    color: var(--secundario);
-    font-size: 1.6rem; /* Reducir tamaño de título para móviles */
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.proyecto p {
-    color: var(--gris);
-    font-size: 1rem; /* Ajuste de tamaño de fuente */
-    margin-bottom: 1rem;
-}
-
-.imagenes-proyecto {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.imagenes-proyecto img {
-    width: 100%; /* Las imágenes ocuparán el 100% del contenedor */
-    max-width: 350px; /* Establecer un tamaño máximo para las imágenes */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Mejoras específicas para pantallas móviles */
-@media (max-width: 768px) {
-    #proyectos {
-        padding: 2rem;
-    }
-
-    .proyectos {
-        grid-template-columns: 1fr; /* Asegura que los proyectos estén en una sola columna */
-        gap: 1.5rem;
-    }
-
-    .proyecto {
-        padding: 1rem;
-    }
-
-    .proyecto h3 {
-        font-size: 1.5rem; /* Ajustamos el tamaño del título */
-    }
-
-    .proyecto p {
-        font-size: 1rem; /* Reducimos el tamaño del texto */
-    }
-
-    .imagenes-proyecto img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .boton {
-        padding: 0.5rem 2rem; /* Ajustar el tamaño del botón para pantallas pequeñas */
-        font-size: 1rem;
-    }
-}
 
 
 /* Estilo para el enlace activo */
@@ -488,31 +400,9 @@ h3 {
 }
 
 
-/* Contenedor de imágenes */
-.imagenes-proyecto {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
 
-/* Estilo de las imágenes dentro de los proyectos */
-.imagenes-proyecto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
 
-/* Estilo para la sección de proyectos */
-#proyectos {
-    margin-top: 1rem;
-    padding: 3rem;
-    background-color: rgba(245, 245, 245, 1);
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-}
+
 
 .servicios {
     margin-top: 1rem;
@@ -525,24 +415,171 @@ h3 {
     margin-bottom: 2rem
 }
 
-/* Título de la sección */
-#proyectos h2 {
-    text-align: center;
-    color: var(--oscuro);
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
+
+
+/* Estilo para la sección de proyectos */
+#proyectos {
+    margin-top: 1rem;
+    padding: 3rem;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    width: 100%; /* Aseguramos que el contenedor de proyectos ocupe todo el ancho */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
 }
 
-#proyectos .boton {
-    background-color: var(--secundario);
-    color: var(--blanco);
-    margin-top: 3rem;
-    padding: .5rem 3rem;
-    border-radius: 5px;
-    font-weight: 700;
+.proyectos {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna para dispositivos pequeños */
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
+
+.proyecto {
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    text-align: center;
+    width: 100%;
+}
+
+.proyecto h3 {
+    color: var(--secundario);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.proyecto p {
+    color: var(--gris);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.imagenes-proyecto {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.imagenes-proyecto img {
+    width: 100%;
+    height: auto;
+
+}
+
+/* Mejoras específicas para pantallas móviles */
+@media (max-width: 768px) {
+    #proyectos {
+        padding: 1rem; /* Reducimos el padding para aprovechar más el ancho */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr; /* Aseguramos que los proyectos estén en una sola columna */
+        gap: 1rem; /* Reducimos el gap entre los proyectos */
+    }
+
+    .proyecto {
+        padding: 0.8rem; /* Reducimos el padding dentro de los proyectos */
+        width: 100%; /* Los proyectos ocupan el 100% del contenedor */
+    }
+
+    .proyecto h3 {
+        font-size: 1.5rem; /* Ajustamos el tamaño del título para móviles */
+    }
+
+    .proyecto p {
+        font-size: 1rem; /* Reducimos el tamaño del texto */
+    }
+
+    .imagenes-proyecto img {
+        max-width: 100%; /* Las imágenes ocuparán todo el contenedor */
+        height: auto;
+    }
+
+    .boton {
+        padding: 0.5rem 2rem; /* Ajustamos el tamaño del botón para pantallas pequeñas */
+        font-size: 1rem;
+    }
+}
+
+/* Mejoras específicas para pantallas más pequeñas */
+@media (max-width: 480px) {
+    #proyectos {
+        padding: 1rem 0.5rem; /* Reducir padding para pantallas más pequeñas */
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr; /* Una sola columna para los proyectos */
+        gap: 1rem; /* Reducir el gap */
+    }
+
+    .proyecto {
+        padding: 0.6rem; /* Reducir el padding dentro de los proyectos */
+        width: 100%; /* Aseguramos que los proyectos ocupen todo el ancho */
+    }
+
+    .proyecto h3 {
+        font-size: 1.3rem; /* Ajustar el tamaño del título para pantallas más pequeñas */
+    }
+
+    .proyecto p {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+    }
+
+    .imagenes-proyecto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .boton {
+        padding: 0.4rem 1.5rem; /* Botón más pequeño */
+        font-size: 0.9rem;
+    }
+}
+
+/* Mejoras para pantallas ultra pequeñas */
+@media (max-width: 320px) {
+    #proyectos {
+        padding: 1rem 0.5rem; /* Reducir padding para pantallas ultra pequeñas */
+    }
+
+    .proyectos {
+        grid-template-columns: 1fr; /* Una sola columna para los proyectos */
+        gap: 0.8rem; /* Reducir el gap */
+    }
+
+    .proyecto {
+        padding: 0.4rem; /* Ajustar padding para pantallas muy pequeñas */
+        width: 100%; /* Los proyectos ocupan todo el ancho */
+    }
+
+    .proyecto h3 {
+        font-size: 1.2rem; /* Reducir aún más el tamaño del título */
+    }
+
+    .proyecto p {
+        font-size: 0.8rem; /* Reducir aún más el tamaño del texto */
+    }
+
+    .imagenes-proyecto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .boton {
+        padding: 0.3rem 1rem; /* Botón aún más pequeño */
+        font-size: 0.8rem;
+    }
+}
+
+
 
 
 /* Media Query para dispositivos móviles (pantallas menores a 768px) */
@@ -556,15 +593,17 @@ h3 {
 
     /* Estilo para el contenedor del header */
     .contenedor-header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
     }
 
     /* Ajuste de la navegación para que sea vertical y ocupe toda la pantalla */
     .navegacion {
-        display: block;
+        display: flex;
+        flex-direction: row;
         position: absolute;
+        justify-content: space-between;
         top: 60px;
         left: 0;
         right: 0;
@@ -610,7 +649,7 @@ h3 {
         margin: 5px 0;
     }
     body{
-        margin-top: 11rem;
+        margin-top: 6rem;
     }
 
 }
@@ -645,26 +684,6 @@ footer i {
     margin-right: 8px;
 }
 
-/* Mejoras para pantallas móviles */
-@media (max-width: 768px) {
-    footer {
-        padding: 1.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    footer p {
-        margin: 0;
-    }
-
-    footer a {
-        display: block; /* Los enlaces se apilan en móviles */
-        margin: 0.5rem 0;
-    }
-
-    footer i {
-        margin-right: 5px;
-    }
-}
 
 /* Mejoras para pantallas grandes (PC) */
 @media (min-width: 769px) {

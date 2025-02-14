@@ -21,12 +21,7 @@ function actualizarActivo() {
     });
 
     // Si llegamos al final de la página y estamos cerca de la última sección
-    const finalPagina = document.documentElement.scrollHeight - window.innerHeight;
-    if (posicionActual >= finalPagina) {
-        // Asegurarse de que el enlace "Contacto" sea activo
-        enlaces.forEach(link => link.classList.remove('activo'));
-        enlaces[enlaces.length - 1].classList.add('activo');  // El último enlace es el de "Contacto"
-    }
+   
 }
 
 // Agregamos el evento de clic a cada enlace

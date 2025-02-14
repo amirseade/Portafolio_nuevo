@@ -86,91 +86,93 @@
                 </ul>
             </div>
         </main>
+    </div>
 
 
 
-        <!-- Mis Proyectos -->
-        <div class="contenedor sombra" id="proyectos">
-            <h2>Mis Proyectos</h2>
-            <main class="proyectos">
-                <div class="proyecto">
-                    <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
-                        <h3>Martinikova: Tienda Online</h3>
-                    </a>
-                    <p>Martinikova es una tienda en línea para la venta de indumentaria, diseñada para ofrecer una
-                        experiencia de usuario fácil y rápida tanto en dispositivos móviles como de escritorio. Los
-                        clientes pueden navegar y realizar pedidos de forma segura y sencilla.</p>
-                    <p>El panel de administración permite al vendedor gestionar el inventario, procesar pedidos y añadir
-                        productos de manera fácil, todo desde una interfaz amigable y simple.</p>
+    <!-- Mis Proyectos -->
+    <div class="contenedor sombra" id="proyectos">
+        <h2>Mis Proyectos</h2>
+        <main class="proyectos">
+            <div class="proyecto">
+                <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
+                    <h3>Martinikova: Tienda Online</h3>
+                </a>
+                <p>Martinikova es una tienda en línea para la venta de indumentaria, diseñada para ofrecer una
+                    experiencia de usuario fácil y rápida tanto en dispositivos móviles como de escritorio. Los
+                    clientes pueden navegar y realizar pedidos de forma segura y sencilla.</p>
+                <p>El panel de administración permite al vendedor gestionar el inventario, procesar pedidos y añadir
+                    productos de manera fácil, todo desde una interfaz amigable y simple.</p>
 
-                    <div class="imagenes-proyecto">
-                        <img src="img/martinikova.png"
-                            alt="Proyecto 1 Imagen 1">
-                    </div>
-                    <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
-                        <button class="boton">Ver Proyecto</button>
-                    </a>
+                <div class="imagenes-proyecto">
+                    <img src="img/martinikova.png" alt="Proyecto 1 Imagen 1">
                 </div>
+                <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
+                    <button class="boton">Ver Proyecto</button>
+                </a>
+            </div>
 
-                <div class="proyecto">
-                    <h3>Sistema Directores: Gestión Docente</h3>
-                    <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la provincia.Desarrollo desde la Direccion general  de Informatica de Santiagogo del Estero (DGISE)</p>
-                    <div class="imagenes-proyecto">
-                        <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
-                    </div>
+            <div class="proyecto">
+                <h3>Sistema Directores: Gestión Docente</h3>
+                <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la
+                    provincia.Desarrollo desde la Direccion general de Informatica de Santiagogo del Estero (DGISE)</p>
+                <div class="imagenes-proyecto">
+                    <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
                 </div>
-                
-            </main>
-        </div>
+            </div>
+
+        </main>
+    </div>
 
 
-        <div id="contacto" class="contacto">
-            <h2>Contacto</h2>
-            <form id="formularioContacto" class="formulario">
-                <legend>Contactános llenando todos los campos</legend>
-        
-                <div class="contenedor-campos">
-                    <div class="campo">
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" placeholder="Nombre" required>
-                    </div>
-                    <div class="campo">
-                        <label>Teléfono</label>
-                        <input type="tel" name="telefono" placeholder="Teléfono">
-                    </div>
-                    <div class="campo w-100">
-                        <label>Correo</label>
-                        <input type="email" name="correo" placeholder="Mail">
-                    </div>
-                    <div class="campo w-100">
-                        <label>Mensaje:</label>
-                        <textarea name="mensaje"></textarea>
-                    </div>
-                </div><!--.contenedor-campos-->
-                <div class="enviar">
-                    <input class="boton" type="submit" value="Enviar WhatsApp">
+    <div id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form id="formularioContacto" class="formulario">
+            <legend>Contactános llenando todos los campos</legend>
+
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" placeholder="Nombre" required>
                 </div>
-            </form>
-        </div>
-        
-        
+                <div class="campo">
+                    <label>Teléfono</label>
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                </div>
+                <div class="campo w-100">
+                    <label>Correo</label>
+                    <input type="email" name="correo" placeholder="Mail">
+                </div>
+                <div class="campo w-100">
+                    <label>Mensaje:</label>
+                    <textarea name="mensaje"></textarea>
+                </div>
+            </div><!--.contenedor-campos-->
+            <div class="enviar">
+                <input class="boton" type="submit" value="Enviar WhatsApp">
+            </div>
+        </form>
+    </div>
+
+
     </div>
 
     <footer>
         <!-- Pie de página -->
-        <p>&copy;2025 JASDEV 
+        <p><b>&copy;2025 JASDEV </b>
             <a href="https://www.instagram.com/amirseade" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
-            </a> 
+            </a>
             <a href="mailto:amirseade00@gmail.com" target="_blank">
                 <i class="fas fa-envelope"></i> amirseade00@gmail.com
-            </a> 
+            </a>
             <a href="https://wa.me/3855724467" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
+
         </p>
     </footer>
-    
+
 
 
     <script src="js/script.js"></script>
