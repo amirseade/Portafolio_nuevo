@@ -115,7 +115,7 @@
             <div class="proyecto">
                 <h3>Sistema Directores: Gestión Docente</h3>
                 <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la
-                    provincia.Desarrollo desde la Direccion general de Informatica de Santiagogo del Estero (DGISE)</p>
+                    provincia.Desarrollo desde la Direccion general de Informatica de Santiago del Estero (DGISE)</p>
                 <div class="imagenes-proyecto">
                     <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
                 </div>
