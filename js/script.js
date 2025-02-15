@@ -30,7 +30,7 @@ function actualizarActivo() {
 
 // Modificar el desplazamiento al hacer clic en cualquier enlace de la barra de navegación
 enlaces.forEach(enlace => {
-    enlace.addEventListener('click', function(event) {
+    enlace.addEventListener('click', function (event) {
         event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
 
         // Obtener el id de la sección que corresponde al enlace clicado
@@ -40,17 +40,45 @@ enlaces.forEach(enlace => {
         // Comprobar si el enlace es el de "Contacto" para aplicar un ajuste diferente
         if (seccionId === 'contacto') {
             // Si es "Contacto", desplazamos -90px
-            window.scrollTo({
-                top: seccion.offsetTop - 170, // Ajuste especial para "Contacto"
-                behavior: 'smooth' // Desplazamiento suave
-            });
+            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
+                window.scrollTo({
+                    top: seccion.offsetTop - 30, // Ajuste para móviles
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            } else {
+                window.scrollTo({
+                    top: seccion.offsetTop - 40, // Ajuste para escritorio
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            }
+        } else if (seccionId === 'habilidades') {
+            // Si es "Mis Habilidades", desplazamos -40px
+            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
+                window.scrollTo({
+                    top: seccion.offsetTop - 130, // Ajuste para móviles
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            } else {
+                window.scrollTo({
+                    top: seccion.offsetTop - 100, // Ajuste para escritorio
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            }
         } else {
-            // Para las demás secciones, desplazamos -80px
-            window.scrollTo({
-                top: seccion.offsetTop - 80, // Ajuste estándar
-                behavior: 'smooth' // Desplazamiento suave
-            });
+            // Para las demás secciones
+            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
+                window.scrollTo({
+                    top: seccion.offsetTop - 60, // Ajuste para móviles
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            } else {
+                window.scrollTo({
+                    top: seccion.offsetTop - 30, // Ajuste estándar para escritorio
+                    behavior: 'smooth' // Desplazamiento suave
+                });
+            }
         }
+
     });
 });
 
@@ -104,6 +132,6 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const whatsappUrl = `https://api.whatsapp.com/send?phone=3855277213&text=${mensajeEncoded}&type=phone_number&app_absent=0`;
 
     // Redirigimos al WhatsApp directamente
-    window.location.href = whatsappUrl; 
+    window.location.href = whatsappUrl;
 });
 

@@ -15,18 +15,31 @@
 
 <body>
 
-    <header class="header">
-        <div class="contenedor-header">
+<header class="header">
+    <div class="contenedor-header">
+        <!-- Logo como enlace -->
+        <a href="index.php" style="text-decoration: none;">
             <img src="img/logo.png" alt="Logo" class="logo">
+        </a>
+
+        <!-- "Amir Seade" como enlace -->
+        <a href="index.php" style="text-decoration: none;">
             <h1 class="nombre">Amir Seade</h1>
-            <a href="index.php" style="text-decoration: none;"><span class="marca">JASDEV</span></a>
-            <nav class="navegacion">
-                <a href="#habilidades">Mis habilidades</a>
-                <a href="#proyectos">Mis Proyectos</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </div>
-    </header>
+        </a>
+
+        <!-- "JASDEV" como enlace -->
+        <a href="index.php" style="text-decoration: none;">
+            <span class="marca">JASDEV</span>
+        </a>
+
+        <nav class="navegacion">
+            <a href="#habilidades">Mis habilidades</a>
+            <a href="#proyectos">Mis Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
+</header>
+
 
 
 
@@ -125,7 +138,7 @@
     </section>
 
 
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto contenedor sombra">
         <h2>Contacto</h2>
         <form id="formularioContacto" class="formulario">
             <legend>Contactános llenando todos los campos</legend>

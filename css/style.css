@@ -22,7 +22,10 @@ p {
     line-height: 2;
 }
 
-
+#habilidades{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
 
 /* Estilos del Header */
 .header {
@@ -129,7 +132,7 @@ h3 {
 
 .contenedor h2 {
     text-align: center;
-  
+
 }
 
 .contenedor p {
@@ -139,13 +142,10 @@ h3 {
 }
 
 .sombra {
-    padding: 2rem;
     margin-bottom: 3rem;
     background-color: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    box-shadow: 1px 1px 1px -9px rgba(0, 0, 0, 0.63);
 }
 
 .nav-bg {
@@ -187,7 +187,7 @@ h3 {
     .navegacion a {
         margin-bottom: 0;
     }
-    
+
 }
 
 .hero {
@@ -409,8 +409,7 @@ h3 {
     padding: 3rem;
     background-color: rgba(245, 245, 245, 1);
     border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     margin-bottom: 2rem
 }
@@ -423,16 +422,18 @@ h3 {
     padding: 3rem;
     background-color: rgba(245, 245, 245, 1);
     border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    width: 100%; /* Aseguramos que el contenedor de proyectos ocupe todo el ancho */
-    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+    width: 100%;
+    /* Aseguramos que el contenedor de proyectos ocupe todo el ancho */
+    box-sizing: border-box;
+    /* Para que el padding no afecte el ancho total */
 }
 
 .proyectos {
     display: grid;
-    grid-template-columns: 1fr; /* Una sola columna para dispositivos pequeños */
+    grid-template-columns: 1fr;
+    /* Una sola columna para dispositivos pequeños */
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -441,8 +442,6 @@ h3 {
     background-color: #F5F5F5;
     padding: 1rem;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
-    -moz-box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
     text-align: center;
     width: 100%;
@@ -476,61 +475,87 @@ h3 {
 /* Mejoras específicas para pantallas móviles */
 @media (max-width: 768px) {
     #proyectos {
-        padding: 1rem; /* Reducimos el padding para aprovechar más el ancho */
-        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        padding: 1rem;
+        /* Reducimos el padding para aprovechar más el ancho */
+        width: 100%;
+        /* Asegura que ocupe todo el ancho disponible */
     }
 
     .proyectos {
-        grid-template-columns: 1fr; /* Aseguramos que los proyectos estén en una sola columna */
-        gap: 1rem; /* Reducimos el gap entre los proyectos */
+        grid-template-columns: 1fr;
+        /* Aseguramos que los proyectos estén en una sola columna */
+        gap: 1rem;
+        /* Reducimos el gap entre los proyectos */
     }
 
     .proyecto {
-        padding: 0.8rem; /* Reducimos el padding dentro de los proyectos */
-        width: 100%; /* Los proyectos ocupan el 100% del contenedor */
+        padding: 0.8rem;
+        /* Reducimos el padding dentro de los proyectos */
+        width: 100%;
+        /* Los proyectos ocupan el 100% del contenedor */
     }
 
     .proyecto h3 {
-        font-size: 1.5rem; /* Ajustamos el tamaño del título para móviles */
+        font-size: 1.5rem;
+        /* Ajustamos el tamaño del título para móviles */
     }
 
     .proyecto p {
-        font-size: 1rem; /* Reducimos el tamaño del texto */
+        font-size: 1rem;
+        /* Reducimos el tamaño del texto */
     }
 
     .imagenes-proyecto img {
-        max-width: 100%; /* Las imágenes ocuparán todo el contenedor */
+        max-width: 100%;
+        /* Las imágenes ocuparán todo el contenedor */
         height: auto;
     }
 
     .boton {
-        padding: 0.5rem 2rem; /* Ajustamos el tamaño del botón para pantallas pequeñas */
+        padding: 0.5rem 2rem;
+        /* Ajustamos el tamaño del botón para pantallas pequeñas */
         font-size: 1rem;
+    }
+
+    .servicios {
+        background-color: #F5F5F5;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+        text-align: center;
+        width: 100%
     }
 }
 
 /* Mejoras específicas para pantallas más pequeñas */
 @media (max-width: 480px) {
     #proyectos {
-        padding: 1rem 0.5rem; /* Reducir padding para pantallas más pequeñas */
+        padding: 1rem 0.5rem;
+        /* Reducir padding para pantallas más pequeñas */
     }
 
     .proyectos {
-        grid-template-columns: 1fr; /* Una sola columna para los proyectos */
-        gap: 1rem; /* Reducir el gap */
+        grid-template-columns: 1fr;
+        /* Una sola columna para los proyectos */
+        gap: 1rem;
+        /* Reducir el gap */
     }
 
     .proyecto {
-        padding: 0.6rem; /* Reducir el padding dentro de los proyectos */
-        width: 100%; /* Aseguramos que los proyectos ocupen todo el ancho */
+        padding: 0.6rem;
+        /* Reducir el padding dentro de los proyectos */
+        width: 100%;
+        /* Aseguramos que los proyectos ocupen todo el ancho */
     }
 
     .proyecto h3 {
-        font-size: 1.3rem; /* Ajustar el tamaño del título para pantallas más pequeñas */
+        font-size: 1.3rem;
+        /* Ajustar el tamaño del título para pantallas más pequeñas */
     }
 
     .proyecto p {
-        font-size: 0.9rem; /* Reducir el tamaño del texto */
+        font-size: 0.9rem;
+        /* Reducir el tamaño del texto */
     }
 
     .imagenes-proyecto img {
@@ -539,7 +564,8 @@ h3 {
     }
 
     .boton {
-        padding: 0.4rem 1.5rem; /* Botón más pequeño */
+        padding: 0.4rem 1.5rem;
+        /* Botón más pequeño */
         font-size: 0.9rem;
     }
 }
@@ -547,25 +573,32 @@ h3 {
 /* Mejoras para pantallas ultra pequeñas */
 @media (max-width: 320px) {
     #proyectos {
-        padding: 1rem 0.5rem; /* Reducir padding para pantallas ultra pequeñas */
+        padding: 1rem 0.5rem;
+        /* Reducir padding para pantallas ultra pequeñas */
     }
 
     .proyectos {
-        grid-template-columns: 1fr; /* Una sola columna para los proyectos */
-        gap: 0.8rem; /* Reducir el gap */
+        grid-template-columns: 1fr;
+        /* Una sola columna para los proyectos */
+        gap: 0.8rem;
+        /* Reducir el gap */
     }
 
     .proyecto {
-        padding: 0.4rem; /* Ajustar padding para pantallas muy pequeñas */
-        width: 100%; /* Los proyectos ocupan todo el ancho */
+        padding: 0.4rem;
+        /* Ajustar padding para pantallas muy pequeñas */
+        width: 100%;
+        /* Los proyectos ocupan todo el ancho */
     }
 
     .proyecto h3 {
-        font-size: 1.2rem; /* Reducir aún más el tamaño del título */
+        font-size: 1.2rem;
+        /* Reducir aún más el tamaño del título */
     }
 
     .proyecto p {
-        font-size: 0.8rem; /* Reducir aún más el tamaño del texto */
+        font-size: 0.8rem;
+        /* Reducir aún más el tamaño del texto */
     }
 
     .imagenes-proyecto img {
@@ -574,7 +607,8 @@ h3 {
     }
 
     .boton {
-        padding: 0.3rem 1rem; /* Botón aún más pequeño */
+        padding: 0.3rem 1rem;
+        /* Botón aún más pequeño */
         font-size: 0.8rem;
     }
 }
@@ -593,6 +627,8 @@ h3 {
 
     /* Estilo para el contenedor del header */
     .contenedor-header {
+        margin-top: 0;
+        padding: 0;
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -615,7 +651,7 @@ h3 {
     .navegacion a {
         display: block;
         padding: 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: var(--blanco);
         text-decoration: none;
     }
@@ -648,7 +684,8 @@ h3 {
         height: 3px;
         margin: 5px 0;
     }
-    body{
+
+    body {
         margin-top: 6rem;
     }
 
@@ -657,8 +694,10 @@ h3 {
 
 /* Estilo del pie de página */
 footer {
-    background-color: var(--oscuro); /* Color de fondo personalizado */
-    color: #fff; /* Color de texto blanco */
+    background-color: var(--oscuro);
+    /* Color de fondo personalizado */
+    color: #fff;
+    /* Color de texto blanco */
     padding: 2rem 1rem;
     text-align: center;
     font-size: 1rem;
@@ -668,7 +707,8 @@ footer {
 
 /* Enlaces dentro del footer */
 footer a {
-    color: #fff; /* Color blanco por defecto */
+    color: #fff;
+    /* Color blanco por defecto */
     text-decoration: none;
     margin: 0 1rem;
     font-size: 1.1rem;
@@ -676,7 +716,8 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffb847; /* Color dorado al pasar el mouse */
+    color: #ffb847;
+    /* Color dorado al pasar el mouse */
 }
 
 /* Estilo de los íconos de las redes sociales */
@@ -696,14 +737,15 @@ footer i {
     }
 
     footer a {
-        display: block; /* Los enlaces se apilan en móviles */
+        display: block;
+        /* Los enlaces se apilan en móviles */
         margin: 0.5rem 0;
     }
 
     footer i {
         margin-right: 5px;
     }
-    
+
 }
 
 
@@ -711,7 +753,8 @@ footer i {
 @media (min-width: 769px) {
     footer {
         display: flex;
-        justify-content: center; /* Centrar los elementos */
+        justify-content: center;
+        /* Centrar los elementos */
         align-items: center;
         font-size: 1rem;
     }
@@ -729,4 +772,13 @@ footer i {
     footer i {
         margin-right: 8px;
     }
+}
+
+.contacto{
+    margin-top: 1rem;
+    padding: 3rem;
+    background-color: rgba(245, 245, 245, 1);
+    border-radius: 10px;
+    box-shadow: 0px 11px 15px -9px rgba(0, 0, 0, 0.63);
+    margin-bottom: 2rem;
 }
