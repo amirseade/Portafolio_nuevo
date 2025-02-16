@@ -653,7 +653,7 @@ h3 {
         top: 60px;
         left: 0;
         right: 0;
-        background-color: var(--oscuro);
+        background-color: black;
         text-align: center;
         width: 100%;
     }
