@@ -95,12 +95,16 @@ p {
         max-width: 1200px;
         margin: 0 auto;
     }
+
+    #habilidades {
+        margin-top: -3rem;
+    }
 }
 
 
 body {
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    background-image: linear-gradient(to top, #F5F5F5 0%, white 100%);
     min-height: 100%;
 
 }
@@ -571,6 +575,10 @@ h3 {
         padding: 0.4rem 1.5rem;
         /* Botón más pequeño */
         font-size: 0.9rem;
+    }
+
+    #habilidades{
+        margin-top: -3rem;
     }
 }
 

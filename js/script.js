@@ -55,7 +55,7 @@ enlaces.forEach(enlace => {
             // Si es "Mis Habilidades", desplazamos -40px
             if (window.innerWidth <= 768) { // Si es un dispositivo móvil
                 window.scrollTo({
-                    top: seccion.offsetTop - 130, // Ajuste para móviles
+                    top: seccion.offsetTop - 40, // Ajuste para móviles
                     behavior: 'smooth' // Desplazamiento suave
                 });
             } else {
