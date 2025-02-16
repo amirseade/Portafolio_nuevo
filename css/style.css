@@ -623,12 +623,18 @@ h3 {
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .h2_hero{
+        margin-top: 7rem;
 
+    }
+}
 
 
 /* Media Query para dispositivos móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
 
+   
     /* Estilo para el logo en dispositivos móviles */
     .logo {
         max-height: 40px;
