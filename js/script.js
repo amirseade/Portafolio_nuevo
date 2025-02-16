@@ -129,7 +129,7 @@ document.getElementById('formularioContacto').addEventListener('submit', functio
     const mensajeEncoded = encodeURIComponent(mensajeWhatsApp);
 
     // Creamos la URL de WhatsApp
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=3855277213&text=${mensajeEncoded}&type=phone_number&app_absent=0`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=3855724467&text=${mensajeEncoded}&type=phone_number&app_absent=0`;
 
     // Redirigimos al WhatsApp directamente
     window.location.href = whatsappUrl;
