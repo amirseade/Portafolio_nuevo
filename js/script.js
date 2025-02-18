@@ -1,8 +1,18 @@
 // Selecciona todos los enlaces de navegación
 const enlaces = document.querySelectorAll('.navegacion a');
 
+// Selecciona el enlace de "Mis habilidades" (suponiendo que es el primer enlace)
+const enlaceHabilidades = document.querySelector('a[href="#habilidades"]');
+
+// Función para actualizar el estado del enlace activo en función del scroll
 function actualizarActivo() {
     let posicionActual = window.scrollY;
+
+    // Comprobamos si estamos en la parte superior de la página (scrollY == 0)
+    if (posicionActual === 0) {
+        // Si estamos en la parte superior, eliminamos la clase 'activo' de "Mis habilidades"
+        enlaceHabilidades.classList.remove('activo');
+    }
 
     // Comprobamos la posición de cada sección
     document.querySelectorAll('section[id]').forEach((div, index) => {
@@ -33,54 +43,39 @@ enlaces.forEach(enlace => {
     enlace.addEventListener('click', function (event) {
         event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
 
+        // Eliminar la clase "activo" de todos los enlaces
+        enlaces.forEach(link => link.classList.remove('activo'));
+
+        // Agregar la clase "activo" al enlace que se ha clickeado
+        this.classList.add('activo');
+
         // Obtener el id de la sección que corresponde al enlace clicado
         const seccionId = enlace.getAttribute('href').substring(1);  // Eliminamos el # del href
         const seccion = document.getElementById(seccionId);
 
-        // Comprobar si el enlace es el de "Contacto" para aplicar un ajuste diferente
+        // Ajustes de desplazamiento según el tipo de dispositivo
+        let offset = 0;
         if (seccionId === 'contacto') {
-            // Si es "Contacto", desplazamos -90px
-            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
-                window.scrollTo({
-                    top: seccion.offsetTop - 30, // Ajuste para móviles
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            } else {
-                window.scrollTo({
-                    top: seccion.offsetTop - 40, // Ajuste para escritorio
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            }
+            offset = window.innerWidth <= 768 ? -30 : -40;
         } else if (seccionId === 'habilidades') {
-            // Si es "Mis Habilidades", desplazamos -40px
-            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
-                window.scrollTo({
-                    top: seccion.offsetTop - 40, // Ajuste para móviles
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            } else {
-                window.scrollTo({
-                    top: seccion.offsetTop - 100, // Ajuste para escritorio
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            }
+            offset = window.innerWidth <= 768 ? -40 : -100;
         } else {
-            // Para las demás secciones
-            if (window.innerWidth <= 768) { // Si es un dispositivo móvil
-                window.scrollTo({
-                    top: seccion.offsetTop - 60, // Ajuste para móviles
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            } else {
-                window.scrollTo({
-                    top: seccion.offsetTop - 30, // Ajuste estándar para escritorio
-                    behavior: 'smooth' // Desplazamiento suave
-                });
-            }
+            offset = window.innerWidth <= 768 ? -60 : -30;
         }
 
+        window.scrollTo({
+            top: seccion.offsetTop + offset,
+            behavior: 'smooth' // Desplazamiento suave
+        });
     });
 });
+
+// Llamamos a la función 'actualizarActivo' cuando el usuario hace scroll
+window.addEventListener('scroll', actualizarActivo);
+
+// Llamamos a la función al cargar la página para establecer el estado inicial
+document.addEventListener('DOMContentLoaded', actualizarActivo);
+
 
 
 

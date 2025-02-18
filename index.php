@@ -14,21 +14,21 @@
 </head>
 
 <body>
-
+<div id="arriba"></div>
 <header class="header">
     <div class="contenedor-header">
         <!-- Logo como enlace -->
-        <a href="index.php" style="text-decoration: none;">
+        <a href="#arriba" style="text-decoration: none;">
             <img src="img/logo.png" alt="Logo" class="logo">
         </a>
 
         <!-- "Amir Seade" como enlace -->
-        <a href="index.php" style="text-decoration: none;">
+        <a href="#arriba" style="text-decoration: none;">
             <h1 class="nombre">Amir Seade</h1>
         </a>
 
         <!-- "JASDEV" como enlace -->
-        <a href="index.php" style="text-decoration: none;">
+        <a href="#arriba" style="text-decoration: none;">
             <span class="marca">JASDEV</span>
         </a>
 
@@ -47,8 +47,8 @@
     <div class="hero">
         <div class="contenido-hero">
             <h2 class="h2_hero">Diseño y Desarrollo Web Freelancer</h2>
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88"
-                    height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none"
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="50"
+                    height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" />
                     <circle cx="12" cy="11" r="3" />
@@ -172,17 +172,17 @@
 
     <footer>
         <!-- Pie de página -->
-        <p><b>&copy;2025 JASDEV </b>
+        <p>
             <a href="https://www.instagram.com/amirseade" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="mailto:amirseade00@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i> amirseade00@gmail.com
             </a>
             <a href="https://wa.me/3855724467" target="_blank">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-
+            <a href="mailto:amirseade00@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i> amirseade00@gmail.com
+            </a>
+            <b>&copy;2025 JASDEV </b>
         </p>
     </footer>
 
