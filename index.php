@@ -172,7 +172,7 @@
 
     <footer>
         <!-- Pie de página -->
-        <p>
+        <div>
             <a href="https://www.instagram.com/amirseade" target="_blank">
                 <i class="fab fa-instagram"></i> Instagram
             </a>
@@ -183,7 +183,7 @@
                 <i class="fas fa-envelope"></i> amirseade00@gmail.com
             </a>
             <b>&copy;2025 JASDEV </b>
-        </p>
+</div>
     </footer>
 
 
