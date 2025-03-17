@@ -14,31 +14,31 @@
 </head>
 
 <body>
-<div id="arriba"></div>
-<header class="header">
-    <div class="contenedor-header">
-        <!-- Logo como enlace -->
-        <a href="#arriba" style="text-decoration: none;">
-            <img src="img/logo.png" alt="Logo" class="logo">
-        </a>
+    <div id="arriba"></div>
+    <header class="header">
+        <div class="contenedor-header">
+            <!-- Logo como enlace -->
+            <a href="#arriba" style="text-decoration: none;">
+                <img src="img/logo.png" alt="Logo" class="logo">
+            </a>
 
-        <!-- "Amir Seade" como enlace -->
-        <a href="#arriba" style="text-decoration: none;">
-            <h1 class="nombre">Amir Seade</h1>
-        </a>
+            <!-- "Amir Seade" como enlace -->
+            <a href="#arriba" style="text-decoration: none;">
+                <h1 class="nombre">Amir Seade</h1>
+            </a>
 
-        <!-- "JASDEV" como enlace -->
-        <a href="#arriba" style="text-decoration: none;">
-            <span class="marca">JASDEV</span>
-        </a>
+            <!-- "JASDEV" como enlace -->
+            <a href="#arriba" style="text-decoration: none;">
+                <span class="marca">JASDEV</span>
+            </a>
 
-        <nav class="navegacion">
-            <a href="#habilidades">Mis habilidades</a>
-            <a href="#proyectos">Mis Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </div>
-</header>
+            <nav class="navegacion">
+                <a href="#habilidades">Mis habilidades</a>
+                <a href="#proyectos">Mis Proyectos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
 
 
@@ -99,7 +99,7 @@
                 </ul>
             </div>
         </main>
-</section>
+    </section>
 
 
 
@@ -133,6 +133,22 @@
                     <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
                 </div>
             </div>
+            <div class="proyecto">
+                <h3>Gestión de Vencimientos para Estudios Contables</h3>
+                <p>
+                    Sistema de gestión diseñado para estudios contables, optimizando la administración de vencimientos impositivos.
+                    Facilita el trabajo de contadores y administrativos, ayudándolos a presentar en tiempo y forma los impuestos de sus clientes.
+                </p>
+                <p>
+                    Además, funciona como un gestor integral de clientes, permitiendo almacenar y administrar claves de acceso de distintos servicios.
+                    Cuenta con una función de recordatorios mediante notificaciones automáticas, asegurando que no se pasen por alto fechas importantes
+                    y garantizando el cumplimiento de todas las obligaciones fiscales.
+                </p>
+                <div class="imagenes-proyecto">
+                    <img src="img/vencimientos.png" alt="Gestión de Vencimientos">
+                </div>
+            </div>
+
 
         </main>
     </section>
@@ -183,7 +199,7 @@
                 <i class="fas fa-envelope"></i> amirseade00@gmail.com
             </a>
             <b>&copy;2025 JASDEV </b>
-</div>
+        </div>
     </footer>
 
 
