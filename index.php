@@ -168,7 +168,7 @@
                     <label>Teléfono</label>
                     <input type="tel" name="telefono" placeholder="Teléfono">
                 </div>
-                <div class="campo w-100">
+                <div class="campo correo w-100">
                     <label>Correo</label>
                     <input type="email" name="correo" placeholder="Mail">
                 </div>
