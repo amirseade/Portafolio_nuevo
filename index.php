@@ -120,9 +120,9 @@
                 <div class="imagenes-proyecto">
                     <img src="img/martinikova.png" alt="Proyecto 1 Imagen 1">
                 </div>
-                <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
+                <!-- <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
                     <button class="boton">Ver Proyecto</button>
-                </a>
+                </a> -->
             </div>
 
             <div class="proyecto">
