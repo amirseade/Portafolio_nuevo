@@ -107,10 +107,28 @@
     <section class="contenedor sombra" id="proyectos">
         <h2>Mis Proyectos</h2>
         <main class="proyectos">
+
+           <div class="proyecto">
+    <h3>ControlPhone: Gestión de Stock y Ventas</h3>
+    <p>ControlPhone es un sistema de gestión de stock y ventas diseñado específicamente para negocios de Iphones 
+       y accesorios. Permite llevar un control detallado del inventario, registrar ventas en tiempo real y generar 
+       reportes de rendimiento.</p>
+    <p>El sistema está pensado para optimizar el manejo de los productos, ofreciendo 
+       una interfaz simple e intuitiva para el administrador.</p>
+    <ul>
+        <li>Gestión de productos e inventario.</li>
+        <li>Registro de ventas y seguimiento de clientes.</li>
+        <li>Reportes de ingresos y movimientos de stock.</li>
+        <li>Acceso rápido y seguro desde cualquier dispositivo.</li>
+    </ul>
+    <div class="imagenes-proyecto">
+        <img src="img/controlphone.png" alt="Proyecto ControlPhone">
+    </div>
+</div>
+
+
             <div class="proyecto">
-                <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
                     <h3>Martinikova: Tienda Online</h3>
-                </a>
                 <p>Martinikova es una tienda en línea para la venta de indumentaria, diseñada para ofrecer una
                     experiencia de usuario fácil y rápida tanto en dispositivos móviles como de escritorio. Los
                     clientes pueden navegar y realizar pedidos de forma segura y sencilla.</p>
@@ -128,11 +146,12 @@
             <div class="proyecto">
                 <h3>Sistema Directores: Gestión Docente</h3>
                 <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la
-                    provincia.Desarrollo desde la Direccion general de Informatica de Santiago del Estero (DGISE)</p>
+                    provincia.Desarrollo desde la Direccion General de Informatica de Santiago del Estero (DGISE)</p>
                 <div class="imagenes-proyecto">
                     <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
                 </div>
             </div>
+
             <div class="proyecto">
                 <h3>Gestión de Vencimientos para Estudios Contables</h3>
                 <p>
