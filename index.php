@@ -109,7 +109,7 @@
         <main class="proyectos">
 
             <div class="proyecto">
-                <h3>ControlPhone: Gestión de Stock y Ventas</h3>
+                <h3><i class="fa-brands fa-apple"></i> ControlPhone: Gestión de Stock y Ventas </h3>
                 <p>ControlPhone es un sistema de gestión de stock y ventas diseñado para negocios de iPhones y accesorios.
                     Permite llevar un control detallado del inventario, registrar ventas en tiempo real y generar reportes
                     de rendimiento. Cuenta con dos perfiles de acceso: administrador y empleado, cada uno con distintos
