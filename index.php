@@ -108,27 +108,26 @@
         <h2>Mis Proyectos</h2>
         <main class="proyectos">
 
-           <div class="proyecto">
-    <h3>ControlPhone: Gestión de Stock y Ventas</h3>
-    <p>ControlPhone es un sistema de gestión de stock y ventas diseñado específicamente para negocios de Iphones 
-       y accesorios. Permite llevar un control detallado del inventario, registrar ventas en tiempo real y generar 
-       reportes de rendimiento.</p>
-    <p>El sistema está pensado para optimizar el manejo de los productos, ofreciendo 
-       una interfaz simple e intuitiva para el administrador.</p>
-    <ul>
-        <li>Gestión de productos e inventario.</li>
-        <li>Registro de ventas y seguimiento de clientes.</li>
-        <li>Reportes de ingresos y movimientos de stock.</li>
-        <li>Acceso rápido y seguro desde cualquier dispositivo.</li>
-    </ul>
-    <div class="imagenes-proyecto">
-        <img src="img/controlphone.png" alt="Proyecto ControlPhone">
-    </div>
-</div>
+            <div class="proyecto">
+                <h3>ControlPhone: Gestión de Stock y Ventas</h3>
+                <p>ControlPhone es un sistema de gestión de stock y ventas diseñado para negocios de iPhones y accesorios.
+                    Permite llevar un control detallado del inventario, registrar ventas en tiempo real y generar reportes
+                    de rendimiento. Cuenta con dos perfiles de acceso: administrador y empleado, cada uno con distintos
+                    privilegios para garantizar una gestión segura y organizada.</p>
+
+                <p>Además, el sistema ofrece un completo módulo de análisis que permite obtener el balance diario, semanal,
+                    mensual o de un período específico, brindando una visión clara del estado del negocio. Todo lo que tu
+                    comercio necesita para administrar stock, ventas y finanzas en un solo lugar.</p>
+
+
+                <div class="imagenes-proyecto">
+                    <img src="img/controlphone.png" alt="Proyecto ControlPhone">
+                </div>
+            </div>
 
 
             <div class="proyecto">
-                    <h3>Martinikova: Tienda Online</h3>
+                <h3>Martinikova: Tienda Online</h3>
                 <p>Martinikova es una tienda en línea para la venta de indumentaria, diseñada para ofrecer una
                     experiencia de usuario fácil y rápida tanto en dispositivos móviles como de escritorio. Los
                     clientes pueden navegar y realizar pedidos de forma segura y sencilla.</p>
