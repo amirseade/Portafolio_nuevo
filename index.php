@@ -1,227 +1,649 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JASDEV</title>
+    <title>Amir Seade | JASDEV — Desarrollador Full Stack & Diseñador Web</title>
+    <meta name="description" content="Portafolio profesional de Amir Seade (JASDEV). Desarrollador Full Stack especializado en aplicaciones web a medida, sistemas SaaS, e-commerce e integración de inteligencia artificial.">
+    <meta name="keywords" content="Desarrollador Web, Full Stack, Amir Seade, JASDEV, PHP, MySQL, JavaScript, UI UX, Sistemas de Gestion, E-Commerce, Santiago del Estero">
+    
+    <!-- Favicon -->
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
-    <div id="arriba"></div>
-    <header class="header">
+    <!-- Elemento ancla superior -->
+    <div id="inicio"></div>
+
+    <!-- Header & Navegación Flotante Glassmorphism -->
+    <header class="header" id="navbar">
         <div class="contenedor-header">
-            <!-- Logo como enlace -->
-            <a href="#arriba" style="text-decoration: none;">
-                <img src="img/logo.png" alt="Logo" class="logo">
+            <a href="#inicio" class="marca-logo" aria-label="Ir al inicio">
+                <img src="img/logo.png" alt="Logo JASDEV" class="logo-img">
+                <div class="marca-texto">
+                    <span class="nombre-autor">Amir Seade</span>
+                    <span class="badge-marca">JASDEV</span>
+                </div>
             </a>
 
-            <!-- "Amir Seade" como enlace -->
-            <a href="#arriba" style="text-decoration: none;">
-                <h1 class="nombre">Amir Seade</h1>
-            </a>
+            <!-- Botón Hamburguesa Móvil -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
 
-            <!-- "JASDEV" como enlace -->
-            <a href="#arriba" style="text-decoration: none;">
-                <span class="marca">JASDEV</span>
-            </a>
-
-            <nav class="navegacion">
-                <a href="#habilidades">Mis habilidades</a>
-                <a href="#proyectos">Mis Proyectos</a>
-                <a href="#contacto">Contacto</a>
+            <!-- Menú de Navegación -->
+            <nav class="navegacion" id="navMenu">
+                <a href="#inicio" class="nav-link activo">Inicio</a>
+                <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="#contacto" class="btn-cta-nav">
+                    <span>Hablemos</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </nav>
         </div>
     </header>
 
+    <!-- HERO SECTION: Alto impacto para contratadores -->
+    <section class="hero-section">
+        <div class="hero-ambient-glow"></div>
+        <div class="contenedor hero-contenedor">
+            <div class="hero-content">
+                <!-- Badge de disponibilidad -->
+                <div class="status-badge reveal-fade">
+                    <span class="status-dot"></span>
+                    <span>Disponible para proyectos & oportunidades</span>
+                </div>
 
+                <h1 class="hero-title reveal-fade">
+                    Transformando ideas complejas en <span class="gradient-text">software web de alto rendimiento</span> y diseño intuitivo.
+                </h1>
 
+                <p class="hero-subtitle reveal-fade">
+                    Hola, soy <strong>Amir Seade</strong>. Desarrollador Full Stack & Diseñador de Interfaces en <strong>JASDEV</strong>. Construyo plataformas a medida, sistemas de gestión escalables, tiendas online y soluciones potenciadas con IA para hacer crecer negocios.
+                </p>
 
+                <!-- Acciones Principales -->
+                <div class="hero-actions reveal-fade">
+                    <a href="#proyectos" class="btn btn-primary">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Ver Proyectos</span>
+                    </a>
+                    <a href="https://wa.me/3855724467?text=Hola%20Amir,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Contactar al instante</span>
+                    </a>
+                    <button class="btn btn-outline" id="btnCopiarEmailHero" data-email="amirseade00@gmail.com" title="Copiar correo">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="textoCopiarHero">Copiar Email</span>
+                    </button>
+                </div>
 
-    <div class="hero">
-        <div class="contenido-hero">
-            <h2 class="h2_hero">Diseño y Desarrollo Web Freelancer</h2>
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="50"
-                    height="50" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFC107" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <circle cx="12" cy="11" r="3" />
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1 -2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z" />
-                </svg>Santiago del Estero, Argentina</p>
+                <!-- Ubicación & Enlaces Rápidos -->
+                <div class="hero-meta reveal-fade">
+                    <div class="meta-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Santiago del Estero, Argentina <small>(Remoto Global)</small></span>
+                    </div>
+                    <div class="social-quick-links">
+                        <a href="https://wa.me/3855724467" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-pill">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:amirseade00@gmail.com" aria-label="Email" class="social-pill">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://www.instagram.com/amirseade" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-pill">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-            <a class="boton" href="#contacto">Contactar</a>
+            <!-- Métricas / Social Proof Card -->
+            <div class="hero-metrics-card reveal-scale">
+                <div class="metric-box">
+                    <div class="metric-number"><span class="counter" data-target="15">15</span>+</div>
+                    <div class="metric-label">Proyectos Web Entregados</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-box">
+                    <div class="metric-number"><span class="counter" data-target="100">100</span>%</div>
+                    <div class="metric-label">Compromiso & Calidad</div>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-box">
+                    <div class="metric-number"><span class="counter" data-target="4">4</span>+</div>
+                    <div class="metric-label">Años de Experiencia</div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <section id="habilidades" class="contenedor sombra">
-        <h2>Mis Habilidades</h2>
-        <main class="servicios">
-            <div class="servicio">
-                <h3>Diseño & Desarrollo Web</h3>
-                <div class="iconos">
-                    <img src="img/software-development.png" alt="" style="width: 54px; height: 54px;">
-                </div>
-                <ul>
-                    <li>Diseño y desarrollo de aplicaciones Web.</li>
-                    <li>Diseño responsive y adaptativo para dispositivos móviles y escritorio.</li>
-                    <li>Diseño de sitios web personalizados y optimizados.</li>
-                </ul>
-            </div>
-            <div class="servicio">
-                <h3>Inteligencia Artificial</h3>
-                <div class="iconos">
-
-                    <!-- https://tablericons.com/ -->
-                    <img src="img/chip-de-ia.png" alt="" style="width: 54px; height: 54px;">
-
-                </div>
-                <ul>
-                    <li>Gran capacidad de manejo de la Inteligencia Artificial.</li>
-                    <li>Desarrollo de algoritmos de IA para mejorar la experiencia de los clientes.Por ejemplo, un Chat
-                        Bot.</li>
-                </ul>
-            </div>
-            <div class="servicio">
-                <h3>E-Commerce </h3>
-                <div class="iconos">
-                    <img src="img/e-commerce.png" alt="" style="width: 54px; height: 54px; margin-left: 8px;">
-                </div>
-                <ul>
-                    <li>Diseño y desarrollo de aplicaciones de comercio electrónico.</li>
-                    <li>Catalogo de productos y servicios.</li>
-                    <li>Control de stock y gestión de pedidos.</li>
-                </ul>
-            </div>
-        </main>
     </section>
 
-
-
-    <!-- Mis Proyectos -->
-    <section class="contenedor sombra" id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <main class="proyectos">
-
-            <div class="proyecto">
-                <h3><i class="fa-brands fa-apple"></i> ControlPhone: Gestión de Stock y Ventas </h3>
-                <p>ControlPhone es un sistema de gestión de stock y ventas diseñado para negocios de iPhones y accesorios.
-                    Permite llevar un control detallado del inventario, registrar ventas en tiempo real y generar reportes
-                    de rendimiento. Cuenta con dos perfiles de acceso: administrador y empleado, cada uno con distintos
-                    privilegios para garantizar una gestión segura y organizada.</p>
-
-                <p>Además, el sistema ofrece un completo módulo de análisis que permite obtener el balance diario, semanal,
-                    mensual o de un período específico, brindando una visión clara del estado del negocio. Todo lo que tu
-                    comercio necesita para administrar stock, ventas y finanzas en un solo lugar.</p>
-
-
-                <div class="imagenes-proyecto">
-                    <img src="img/controlphone.png" alt="Proyecto ControlPhone">
-                </div>
-            </div>
-
-
-            <div class="proyecto">
-                <h3>Martinikova: Tienda Online</h3>
-                <p>Martinikova es una tienda en línea para la venta de indumentaria, diseñada para ofrecer una
-                    experiencia de usuario fácil y rápida tanto en dispositivos móviles como de escritorio. Los
-                    clientes pueden navegar y realizar pedidos de forma segura y sencilla.</p>
-                <p>El panel de administración permite al vendedor gestionar el inventario, procesar pedidos y añadir
-                    productos de manera fácil, todo desde una interfaz amigable y simple.</p>
-
-                <div class="imagenes-proyecto">
-                    <img src="img/martinikova.png" alt="Proyecto 1 Imagen 1">
-                </div>
-                <!-- <a href="https://martinikova.jasdev.site/inicio" target="_blank" style="text-decoration: none;">
-                    <button class="boton">Ver Proyecto</button>
-                </a> -->
-            </div>
-
-            <div class="proyecto">
-                <h3>Sistema Directores: Gestión Docente</h3>
-                <p>Sistema de gestión desarrollado para la administración de docentes en escuelas de la
-                    provincia.Desarrollo desde la Direccion General de Informatica de Santiago del Estero (DGISE)</p>
-                <div class="imagenes-proyecto">
-                    <img src="img/directores.png" alt="Proyecto 2 Imagen 1">
-                </div>
-            </div>
-
-            <div class="proyecto">
-                <h3>Gestión de Vencimientos para Estudios Contables</h3>
-                <p>
-                    Sistema de gestión diseñado para estudios contables, optimizando la administración de vencimientos impositivos.
-                    Facilita el trabajo de contadores y administrativos, ayudándolos a presentar en tiempo y forma los impuestos de sus clientes.
+    <!-- SECCIÓN: SOBRE MÍ / VALOR PARA EL CONTRATADOR -->
+    <section class="seccion sobre-mi-seccion" id="sobre-mi">
+        <div class="contenedor">
+            <div class="seccion-header">
+                <span class="seccion-tag"><i class="fa-solid fa-user-check"></i> Propuesta de Valor</span>
+                <h2 class="seccion-titulo">¿Por qué trabajar conmigo?</h2>
+                <p class="seccion-subtitulo">
+                    Combino rigor técnico de ingeniería con sensibilidad visual para crear productos digitales que no solo se ven profesionales, sino que generan resultados comerciales medibles.
                 </p>
-                <p>
-                    Además, funciona como un gestor integral de clientes, permitiendo almacenar y administrar claves de acceso de distintos servicios.
-                    Cuenta con una función de recordatorios mediante notificaciones automáticas, asegurando que no se pasen por alto fechas importantes
-                    y garantizando el cumplimiento de todas las obligaciones fiscales.
+            </div>
+
+            <div class="pilares-grid">
+                <!-- Pilar 1 -->
+                <div class="pilar-card reveal-fade">
+                    <div class="pilar-icono">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Arquitectura Robusta & Código Limpio</h3>
+                    <p>Desarrollo backend y frontend estructurado, modular y preparado para escalar sin generar deuda técnica innecesaria.</p>
+                    <ul class="pilar-features">
+                        <li><i class="fa-solid fa-check"></i> PHP / MySQL / JavaScript modular</li>
+                        <li><i class="fa-solid fa-check"></i> Seguridad en control de accesos y roles</li>
+                        <li><i class="fa-solid fa-check"></i> Rendimiento y carga rápida</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="pilar-card reveal-fade">
+                    <div class="pilar-icono">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Experiencia de Usuario (UI/UX) Excepcional</h3>
+                    <p>Diseño enfocado en la usabilidad, reduciendo la fricción para que los usuarios y clientes operen de forma intuitiva desde cualquier pantalla.</p>
+                    <ul class="pilar-features">
+                        <li><i class="fa-solid fa-check"></i> Interfaces 100% responsivas</li>
+                        <li><i class="fa-solid fa-check"></i> Jerarquía visual clara y moderna</li>
+                        <li><i class="fa-solid fa-check"></i> Micro-interacciones orientadas a conversión</li>
+                    </ul>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="pilar-card reveal-fade">
+                    <div class="pilar-icono">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Innovación con IA & Automatización</h3>
+                    <p>Integración de capacidades de Inteligencia Artificial para automatizar tareas repetitivas, atención al cliente y análisis de datos.</p>
+                    <ul class="pilar-features">
+                        <li><i class="fa-solid fa-check"></i> Asistentes y Chatbots inteligentes</li>
+                        <li><i class="fa-solid fa-check"></i> Notificaciones y recordatorios automáticos</li>
+                        <li><i class="fa-solid fa-check"></i> Optimización de flujos de negocio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PROYECTOS DESTACADOS -->
+    <section class="seccion proyectos-seccion" id="proyectos">
+        <div class="contenedor">
+            <div class="seccion-header">
+                <span class="seccion-tag"><i class="fa-solid fa-laptop-code"></i> Casos de Éxito</span>
+                <h2 class="seccion-titulo">Proyectos Destacados</h2>
+                <p class="seccion-subtitulo">
+                    Sistemas en producción desarrollados para resolver problemáticas reales de negocio, administración y comercio electrónico.
                 </p>
-                <div class="imagenes-proyecto">
-                    <img src="img/vencimientos.png" alt="Gestión de Vencimientos">
-                </div>
             </div>
 
-
-        </main>
-    </section>
-
-
-    <section id="contacto" class="contacto contenedor sombra">
-        <h2>Contacto</h2>
-        <form id="formularioContacto" class="formulario">
-            <legend>Contactános llenando todos los campos</legend>
-
-            <div class="contenedor-campos">
-                <div class="campo">
-                    <label>Nombre</label>
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                </div>
-                <div class="campo">
-                    <label>Teléfono</label>
-                    <input type="tel" name="telefono" placeholder="Teléfono">
-                </div>
-                <div class="campo correo w-100">
-                    <label>Correo</label>
-                    <input type="email" name="correo" placeholder="Mail">
-                </div>
-                <div class="campo w-100">
-                    <label>Mensaje:</label>
-                    <textarea name="mensaje"></textarea>
-                </div>
-            </div><!--.contenedor-campos-->
-            <div class="enviar">
-                <input class="boton" type="submit" value="Enviar WhatsApp">
+            <!-- Filtros interactivos -->
+            <div class="filtros-proyectos">
+                <button class="btn-filtro activo" data-filtro="todos">Todos (<span id="totalProyectos">4</span>)</button>
+                <button class="btn-filtro" data-filtro="saas">Sistemas & SaaS</button>
+                <button class="btn-filtro" data-filtro="ecommerce">E-Commerce</button>
+                <button class="btn-filtro" data-filtro="institucional">Institucional</button>
             </div>
-        </form>
+
+            <!-- Grid de Proyectos -->
+            <div class="proyectos-grid">
+                
+                <!-- Proyecto 1: ControlPhone -->
+                <article class="proyecto-card reveal-fade" data-categoria="saas">
+                    <div class="proyecto-preview" onclick="abrirLightbox('img/controlphone.png', 'ControlPhone - Sistema de Stock y Ventas')">
+                        <img src="img/controlphone.png" alt="Sistema ControlPhone" loading="lazy">
+                        <div class="proyecto-overlay">
+                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <div class="proyecto-header-info">
+                            <span class="badge-cat"><i class="fa-brands fa-apple"></i> SaaS / Gestión Comercial</span>
+                            <span class="badge-estado">En Producción</span>
+                        </div>
+                        <h3 class="proyecto-titulo">ControlPhone: Gestión Integral de Stock, Ventas & Analítica</h3>
+                        <p class="proyecto-desc">
+                            Sistema de gestión integral diseñado para comercios de tecnología y accesorios. Permite control de inventario en tiempo real, registro de ventas rápidas, gestión de permisos (Administrador y Empleados) y módulo analítico con balance financiero diario, semanal y mensual.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript ES6</span>
+                            <span class="tag">Gestión de Roles</span>
+                            <span class="tag">Reportes & Finanzas</span>
+                        </div>
+
+                        <div class="proyecto-footer">
+                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/controlphone.png', 'ControlPhone - Sistema de Stock y Ventas')">
+                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Martinikova -->
+                <article class="proyecto-card reveal-fade" data-categoria="ecommerce">
+                    <div class="proyecto-preview" onclick="abrirLightbox('img/martinikova.png', 'Martinikova - Tienda Online de Indumentaria')">
+                        <img src="img/martinikova.png" alt="Tienda Online Martinikova" loading="lazy">
+                        <div class="proyecto-overlay">
+                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <div class="proyecto-header-info">
+                            <span class="badge-cat"><i class="fa-solid fa-bag-shopping"></i> E-Commerce & Retail</span>
+                            <span class="badge-estado">En Producción</span>
+                        </div>
+                        <h3 class="proyecto-titulo">Martinikova: Plataforma E-Commerce con Panel Administrativo</h3>
+                        <p class="proyecto-desc">
+                            Tienda en línea orientada a indumentaria con catálogo dinámico optimizado para móviles y escritorio. Incluye carrito ágil, checkout intuitivo y un panel de administración para gestión de stock, pedidos y precios en tiempo real.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">E-Commerce</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Panel Admin</span>
+                            <span class="tag">UX Mobile-First</span>
+                            <span class="tag">Catálogo Dinámico</span>
+                        </div>
+
+                        <div class="proyecto-footer">
+                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/martinikova.png', 'Martinikova - Tienda Online')">
+                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: Sistema Directores -->
+                <article class="proyecto-card reveal-fade" data-categoria="institucional">
+                    <div class="proyecto-preview" onclick="abrirLightbox('img/directores.png', 'Sistema Directores - DGISE')">
+                        <img src="img/directores.png" alt="Sistema Directores DGISE" loading="lazy">
+                        <div class="proyecto-overlay">
+                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <div class="proyecto-header-info">
+                            <span class="badge-cat"><i class="fa-solid fa-building-columns"></i> Gestión Gubernamental</span>
+                            <span class="badge-estado">Sector Público</span>
+                        </div>
+                        <h3 class="proyecto-titulo">Sistema Directores: Gestión Docente e Institucional</h3>
+                        <p class="proyecto-desc">
+                            Plataforma de administración y trazabilidad de docentes en escuelas provinciales. Desarrollado en el marco de la <strong>Dirección General de Informática de Santiago del Estero (DGISE)</strong>, asegurando alta disponibilidad y manejo estructurado de datos.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">PHP / Backend</span>
+                            <span class="tag">Bases de Datos Relacionales</span>
+                            <span class="tag">Seguridad de Datos</span>
+                            <span class="tag">DGISE</span>
+                        </div>
+
+                        <div class="proyecto-footer">
+                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/directores.png', 'Sistema Directores - DGISE')">
+                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Proyecto 4: Gestión de Vencimientos -->
+                <article class="proyecto-card reveal-fade" data-categoria="saas">
+                    <div class="proyecto-preview" onclick="abrirLightbox('img/vencimientos.png', 'Gestión de Vencimientos para Estudios Contables')">
+                        <img src="img/vencimientos.png" alt="Gestión de Vencimientos" loading="lazy">
+                        <div class="proyecto-overlay">
+                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <div class="proyecto-header-info">
+                            <span class="badge-cat"><i class="fa-solid fa-calculator"></i> FinTech & Legal / Contable</span>
+                            <span class="badge-estado">En Producción</span>
+                        </div>
+                        <h3 class="proyecto-titulo">Gestión de Vencimientos & Claves para Estudios Contables</h3>
+                        <p class="proyecto-desc">
+                            Software especializado para contadores y estudios fiscales. Automatiza el calendario de vencimientos impositivos de clientes, envía notificaciones automáticas y opera como un gestor seguro de credenciales y accesos de servicios fiscales.
+                        </p>
+                        
+                        <div class="tech-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Automatización</span>
+                            <span class="tag">Notificaciones</span>
+                            <span class="tag">Bóveda de Claves Seguras</span>
+                            <span class="tag">Control Fiscal</span>
+                        </div>
+
+                        <div class="proyecto-footer">
+                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/vencimientos.png', 'Gestión de Vencimientos Contables')">
+                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
     </section>
 
+    <!-- SECCIÓN: HABILIDADES & TECH STACK -->
+    <section class="seccion habilidades-seccion" id="habilidades">
+        <div class="contenedor">
+            <div class="seccion-header">
+                <span class="seccion-tag"><i class="fa-solid fa-microchip"></i> Stack Tecnológico</span>
+                <h2 class="seccion-titulo">Habilidades & Especialidades</h2>
+                <p class="seccion-subtitulo">
+                    Herramientas y tecnologías que domino para llevar proyectos desde el concepto hasta el despliegue en producción.
+                </p>
+            </div>
 
-    </div>
+            <div class="habilidades-grid">
+                <!-- Tarjeta 1: Desarrollo Web -->
+                <div class="habilidad-card reveal-fade">
+                    <div class="habilidad-header">
+                        <div class="habilidad-icon-wrap">
+                            <img src="img/software-development.png" alt="Desarrollo Web" class="habilidad-img">
+                        </div>
+                        <div>
+                            <h3>Desarrollo Frontend & Backend</h3>
+                            <span class="habilidad-sub">Arquitectura full stack</span>
+                        </div>
+                    </div>
+                    <ul class="habilidad-lista">
+                        <li><i class="fa-solid fa-circle-check"></i> Aplicaciones web a medida, rápidas y seguras.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Diseño 100% responsivo para móviles, tablets y monitores.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Integración con APIs REST, bases de datos y servicios externos.</li>
+                    </ul>
+                    <div class="tech-pills">
+                        <span>HTML5</span>
+                        <span>CSS3 Moderno</span>
+                        <span>JavaScript ES6+</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
 
-    <footer>
-        <!-- Pie de página -->
-        <div>
-            <a href="https://www.instagram.com/amirseade" target="_blank">
-                <i class="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="https://wa.me/3855724467" target="_blank">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="mailto:amirseade00@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i> amirseade00@gmail.com
-            </a>
-            <b>&copy;2025 JASDEV </b>
+                <!-- Tarjeta 2: Inteligencia Artificial -->
+                <div class="habilidad-card reveal-fade">
+                    <div class="habilidad-header">
+                        <div class="habilidad-icon-wrap">
+                            <img src="img/chip-de-ia.png" alt="Inteligencia Artificial" class="habilidad-img">
+                        </div>
+                        <div>
+                            <h3>Inteligencia Artificial & Bots</h3>
+                            <span class="habilidad-sub">Automatización inteligente</span>
+                        </div>
+                    </div>
+                    <ul class="habilidad-lista">
+                        <li><i class="fa-solid fa-circle-check"></i> Integración de modelos de IA y LLMs en flujos de trabajo.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Chatbots interactivos para atención al cliente y ventas.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Procesamiento automatizado y optimización de respuestas.</li>
+                    </ul>
+                    <div class="tech-pills">
+                        <span>AI Prompts & Logic</span>
+                        <span>Chatbots</span>
+                        <span>APIs de IA</span>
+                        <span>Automatización</span>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: E-Commerce & Negocios -->
+                <div class="habilidad-card reveal-fade">
+                    <div class="habilidad-header">
+                        <div class="habilidad-icon-wrap">
+                            <img src="img/e-commerce.png" alt="E-Commerce" class="habilidad-img">
+                        </div>
+                        <div>
+                            <h3>E-Commerce & Gestión Comercial</h3>
+                            <span class="habilidad-sub">Sistemas orientados a ventas</span>
+                        </div>
+                    </div>
+                    <ul class="habilidad-lista">
+                        <li><i class="fa-solid fa-circle-check"></i> Tiendas virtuales con catálogos optimizados para conversión.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Control de inventario, stock en tiempo real y ventas.</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Paneles de administración amigables e intuitivos.</li>
+                    </ul>
+                    <div class="tech-pills">
+                        <span>Carritos de Compra</span>
+                        <span>Control de Stock</span>
+                        <span>Reportes Financieros</span>
+                        <span>Paneles Admin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CONTACTO & CONVERSIÓN RÁPIDA -->
+    <section class="seccion contacto-seccion" id="contacto">
+        <div class="contenedor">
+            <div class="seccion-header">
+                <span class="seccion-tag"><i class="fa-solid fa-comments"></i> Iniciar Conversación</span>
+                <h2 class="seccion-titulo">¿Listo para impulsar tu proyecto?</h2>
+                <p class="seccion-subtitulo">
+                    Hablemos de tus necesidades técnicas o de la oportunidad laboral en tu equipo. Respondo en menos de 24 horas.
+                </p>
+            </div>
+
+            <div class="contacto-wrapper">
+                <!-- Columna Izquierda: Accesos Directos de Confianza -->
+                <div class="contacto-info-card reveal-fade">
+                    <h3>Canales de Comunicación Directa</h3>
+                    <p class="contacto-info-p">Puedes escribirme directamente por tu canal preferido o completar el formulario para enviar una propuesta rápida:</p>
+                    
+                    <div class="contacto-items">
+                        <a href="https://wa.me/3855724467" target="_blank" rel="noopener noreferrer" class="contacto-item-link">
+                            <div class="contacto-item-icono whatsapp-bg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="contacto-item-texto">
+                                <span class="contacto-item-label">WhatsApp Directo</span>
+                                <span class="contacto-item-val">+54 385 572-4467</span>
+                            </div>
+                        </a>
+
+                        <div class="contacto-item-link" id="btnCopiarEmailContacto" role="button" tabindex="0" title="Haz clic para copiar">
+                            <div class="contacto-item-icono mail-bg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contacto-item-texto">
+                                <span class="contacto-item-label">Correo Electrónico (Clic para copiar)</span>
+                                <span class="contacto-item-val" id="emailValText">amirseade00@gmail.com</span>
+                            </div>
+                            <i class="fa-regular fa-copy copy-icon-subtle"></i>
+                        </div>
+
+                        <a href="https://www.instagram.com/amirseade" target="_blank" rel="noopener noreferrer" class="contacto-item-link">
+                            <div class="contacto-item-icono instagram-bg">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="contacto-item-texto">
+                                <span class="contacto-item-label">Instagram</span>
+                                <span class="contacto-item-val">@amirseade</span>
+                            </div>
+                        </a>
+
+                        <div class="contacto-item-link static-item">
+                            <div class="contacto-item-icono location-bg">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div class="contacto-item-texto">
+                                <span class="contacto-item-label">Ubicación</span>
+                                <span class="contacto-item-val">Santiago del Estero, Argentina (Remoto)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="garantia-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>Privacidad garantizada. No comparto tu información con terceros.</span>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario Inteligente -->
+                <div class="contacto-form-card reveal-fade">
+                    <form id="formularioContacto" class="formulario-moderno" novalidate>
+                        <div class="form-header-badge">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Envío directo por WhatsApp o Mail</span>
+                        </div>
+
+                        <!-- Selector de Tipo de Proyecto / Interés -->
+                        <div class="campo-grupo">
+                            <label class="form-label">¿Qué tipo de proyecto u oportunidad tienes en mente?</label>
+                            <div class="selector-tipo-proyecto">
+                                <label class="tipo-opcion">
+                                    <input type="radio" name="tipo_proyecto" value="Sistema Web / SaaS" checked>
+                                    <span class="tipo-badge">Sistema Web / SaaS</span>
+                                </label>
+                                <label class="tipo-opcion">
+                                    <input type="radio" name="tipo_proyecto" value="Tienda Online (E-Commerce)">
+                                    <span class="tipo-badge">E-Commerce</span>
+                                </label>
+                                <label class="tipo-opcion">
+                                    <input type="radio" name="tipo_proyecto" value="Propuesta Laboral / Equipo Tech">
+                                    <span class="tipo-badge">Oferta Laboral</span>
+                                </label>
+                                <label class="tipo-opcion">
+                                    <input type="radio" name="tipo_proyecto" value="Otro">
+                                    <span class="tipo-badge">Otro</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="campo-input">
+                                <label for="form-nombre" class="form-label">Nombre o Empresa *</label>
+                                <div class="input-wrap">
+                                    <i class="fa-regular fa-user input-icon"></i>
+                                    <input type="text" id="form-nombre" name="nombre" placeholder="Ej. Juan Pérez / TechCorp" required>
+                                </div>
+                            </div>
+                            <div class="campo-input">
+                                <label for="form-telefono" class="form-label">Teléfono / WhatsApp *</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-phone input-icon"></i>
+                                    <input type="tel" id="form-telefono" name="telefono" placeholder="+54 9 11 ..." required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campo-input">
+                            <label for="form-correo" class="form-label">Correo Electrónico *</label>
+                            <div class="input-wrap">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                                <input type="email" id="form-correo" name="correo" placeholder="tu@empresa.com" required>
+                            </div>
+                        </div>
+
+                        <div class="campo-input">
+                            <label for="form-mensaje" class="form-label">Cuéntame sobre el proyecto u objetivo *</label>
+                            <div class="input-wrap textarea-wrap">
+                                <i class="fa-regular fa-comment-dots input-icon"></i>
+                                <textarea id="form-mensaje" name="mensaje" rows="4" placeholder="Describe brevemente qué necesitas construir, tiempos estimados o presupuesto aproximado..." required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-acciones">
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>Enviar Mensaje por WhatsApp</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MODERNO -->
+    <footer class="footer">
+        <div class="contenedor footer-contenedor">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="JASDEV Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Amir Seade <small>| JASDEV</small></span>
+                </div>
+                <p class="footer-copy">
+                    Desarrollando software funcional, moderno y escalable para empresas y personas visionarias.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <a href="#inicio">Inicio</a>
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-social">
+                <h4>Contacto Rápido</h4>
+                <div class="footer-social-icons">
+                    <a href="https://wa.me/3855724467" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="mailto:amirseade00@gmail.com" aria-label="Correo"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/amirseade" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <p class="footer-location"><i class="fa-solid fa-location-dot"></i> Santiago del Estero, Argentina</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="contenedor">
+                <p>&copy; <?php echo date('Y'); ?> <strong>JASDEV</strong> | Amir Seade. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- MODAL LIGHTBOX PARA PROYECTOS -->
+    <div id="lightboxModal" class="lightbox-modal" aria-hidden="true" role="dialog">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar modal">&times;</button>
+            <img id="lightboxImg" src="" alt="Vista previa del proyecto">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
 
+    <!-- TOAST NOTIFICATION -->
+    <div id="toastNotification" class="toast-notification">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">¡Correo copiado al portapapeles!</span>
+    </div>
 
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <a href="#inicio" id="btnBackToTop" class="btn-back-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- SCRIPTS -->
     <script src="js/script.js"></script>
 </body>
 
