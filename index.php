@@ -1,3 +1,71 @@
+<?php
+// ==========================================================================
+// CONFIGURACIÓN Y LISTA DE PROYECTOS (SIN BASE DE DATOS)
+// Para agregar más imágenes o proyectos, solo edita este arreglo PHP:
+// ==========================================================================
+
+$proyectos = [
+    [
+        'id' => 'controlphone',
+        'titulo' => 'ControlPhone: Gestión Integral de Stock, Ventas & Analítica',
+        'categoria' => 'saas',
+        'categoria_label' => 'SaaS / Gestión Comercial',
+        'categoria_icono' => 'fa-brands fa-apple',
+        'estado' => 'En Producción',
+        'descripcion' => 'Sistema de gestión integral diseñado para comercios de tecnología y accesorios. Permite control de inventario en tiempo real, registro de ventas rápidas, gestión de permisos (Administrador y Empleados) y módulo analítico con balance financiero diario, semanal y mensual.',
+        'imagenes' => [
+            'img/controlphone.png'
+            // Puedes agregar más imágenes aquí simplemente agregando comas:
+            // 'img/controlphone_dashboard.png',
+            // 'img/controlphone_ventas.png',
+        ],
+        'tags' => ['PHP', 'MySQL', 'JavaScript ES6', 'Gestión de Roles', 'Reportes & Finanzas']
+    ],
+    [
+        'id' => 'martinikova',
+        'titulo' => 'Martinikova: Plataforma E-Commerce con Panel Administrativo',
+        'categoria' => 'ecommerce',
+        'categoria_label' => 'E-Commerce & Retail',
+        'categoria_icono' => 'fa-solid fa-bag-shopping',
+        'estado' => 'En Producción',
+        'descripcion' => 'Tienda en línea orientada a indumentaria con catálogo dinámico optimizado para móviles y escritorio. Incluye carrito ágil, checkout intuitivo y un panel de administración para gestión de stock, pedidos y precios en tiempo real.',
+        'imagenes' => [
+            'img/martinikova.png'
+            // 'img/martinikova_catalogo.png',
+            // 'img/martinikova_admin.png',
+        ],
+        'tags' => ['E-Commerce', 'PHP', 'Panel Admin', 'UX Mobile-First', 'Catálogo Dinámico']
+    ],
+    [
+        'id' => 'directores',
+        'titulo' => 'Sistema Directores: Gestión Docente e Institucional',
+        'categoria' => 'institucional',
+        'categoria_label' => 'Gestión Gubernamental',
+        'categoria_icono' => 'fa-solid fa-building-columns',
+        'estado' => 'Sector Público',
+        'descripcion' => 'Plataforma de administración y trazabilidad de docentes en escuelas provinciales. Desarrollado en el marco de la Dirección General de Informática de Santiago del Estero (DGISE), asegurando alta disponibilidad y manejo estructurado de datos.',
+        'imagenes' => [
+            'img/directores.png'
+            // 'img/directores_escuelas.png',
+        ],
+        'tags' => ['PHP / Backend', 'Bases de Datos Relacionales', 'Seguridad de Datos', 'DGISE']
+    ],
+    [
+        'id' => 'vencimientos',
+        'titulo' => 'Gestión de Vencimientos & Claves para Estudios Contables',
+        'categoria' => 'saas',
+        'categoria_label' => 'FinTech & Contable',
+        'categoria_icono' => 'fa-solid fa-calculator',
+        'estado' => 'En Producción',
+        'descripcion' => 'Software especializado para contadores y estudios fiscales. Automatiza el calendario de vencimientos impositivos de clientes, envía notificaciones automáticas y opera como un gestor seguro de credenciales y accesos de servicios fiscales.',
+        'imagenes' => [
+            'img/vencimientos.png'
+            // 'img/vencimientos_calendario.png',
+        ],
+        'tags' => ['PHP', 'Automatización', 'Notificaciones', 'Bóveda de Claves Seguras', 'Control Fiscal']
+    ]
+];
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -191,7 +259,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: PROYECTOS DESTACADOS -->
+    <!-- SECCIÓN: PROYECTOS DESTACADOS CON GALERÍA MULTI-IMAGEN -->
     <section class="seccion proyectos-seccion" id="proyectos">
         <div class="contenedor">
             <div class="seccion-header">
@@ -204,150 +272,89 @@
 
             <!-- Filtros interactivos -->
             <div class="filtros-proyectos">
-                <button class="btn-filtro activo" data-filtro="todos">Todos (<span id="totalProyectos">4</span>)</button>
+                <button class="btn-filtro activo" data-filtro="todos">Todos (<span id="totalProyectos"><?php echo count($proyectos); ?></span>)</button>
                 <button class="btn-filtro" data-filtro="saas">Sistemas & SaaS</button>
                 <button class="btn-filtro" data-filtro="ecommerce">E-Commerce</button>
                 <button class="btn-filtro" data-filtro="institucional">Institucional</button>
             </div>
 
-            <!-- Grid de Proyectos -->
+            <!-- Grid de Proyectos Dinámico en PHP (Sin Base de Datos) -->
             <div class="proyectos-grid">
-                
-                <!-- Proyecto 1: ControlPhone -->
-                <article class="proyecto-card reveal-fade" data-categoria="saas">
-                    <div class="proyecto-preview" onclick="abrirLightbox('img/controlphone.png', 'ControlPhone - Sistema de Stock y Ventas')">
-                        <img src="img/controlphone.png" alt="Sistema ControlPhone" loading="lazy">
-                        <div class="proyecto-overlay">
-                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
+                <?php foreach ($proyectos as $p): 
+                    $jsonImagenes = htmlspecialchars(json_encode($p['imagenes']), ENT_QUOTES, 'UTF-8');
+                    $totalFotos = count($p['imagenes']);
+                    $fotoPrincipal = $p['imagenes'][0];
+                ?>
+                <article class="proyecto-card reveal-fade" data-categoria="<?php echo $p['categoria']; ?>" data-id="<?php echo $p['id']; ?>">
+                    
+                    <!-- Preview y Mini-Galería -->
+                    <div class="proyecto-preview-wrapper">
+                        <div class="proyecto-preview" onclick="abrirGaleriaProyecto('<?php echo $p['id']; ?>', 0)">
+                            <img src="<?php echo $fotoPrincipal; ?>" alt="<?php echo htmlspecialchars($p['titulo']); ?>" id="preview-img-<?php echo $p['id']; ?>" loading="lazy">
+                            
+                            <div class="proyecto-overlay">
+                                <span class="btn-ver-imagen">
+                                    <i class="fa-solid fa-expand"></i> 
+                                    <?php echo $totalFotos > 1 ? "Ver Galería ($totalFotos fotos)" : "Ampliar Captura"; ?>
+                                </span>
+                            </div>
+
+                            <!-- Badge flotante de cantidad de fotos -->
+                            <div class="badge-contador-fotos">
+                                <i class="fa-solid fa-images"></i>
+                                <span><?php echo $totalFotos; ?> <?php echo $totalFotos === 1 ? 'captura' : 'capturas'; ?></span>
+                            </div>
                         </div>
+
+                        <!-- Miniaturas si el proyecto tiene múltiples imágenes -->
+                        <?php if ($totalFotos > 1): ?>
+                        <div class="proyecto-thumbnails-bar">
+                            <?php foreach ($p['imagenes'] as $idx => $thumb): ?>
+                            <button type="button" 
+                                    class="thumb-btn <?php echo $idx === 0 ? 'activo' : ''; ?>" 
+                                    onclick="cambiarFotoTarjeta('<?php echo $p['id']; ?>', '<?php echo $thumb; ?>', <?php echo $idx; ?>)"
+                                    aria-label="Ver captura <?php echo $idx + 1; ?>">
+                                <img src="<?php echo $thumb; ?>" alt="Miniatura <?php echo $idx + 1; ?>">
+                            </button>
+                            <?php endforeach; ?>
+                        </div>
+                        <?php endif; ?>
                     </div>
+
+                    <!-- Información del Proyecto -->
                     <div class="proyecto-info">
                         <div class="proyecto-header-info">
-                            <span class="badge-cat"><i class="fa-brands fa-apple"></i> SaaS / Gestión Comercial</span>
-                            <span class="badge-estado">En Producción</span>
+                            <span class="badge-cat"><i class="<?php echo $p['categoria_icono']; ?>"></i> <?php echo $p['categoria_label']; ?></span>
+                            <span class="badge-estado"><?php echo $p['estado']; ?></span>
                         </div>
-                        <h3 class="proyecto-titulo">ControlPhone: Gestión Integral de Stock, Ventas & Analítica</h3>
-                        <p class="proyecto-desc">
-                            Sistema de gestión integral diseñado para comercios de tecnología y accesorios. Permite control de inventario en tiempo real, registro de ventas rápidas, gestión de permisos (Administrador y Empleados) y módulo analítico con balance financiero diario, semanal y mensual.
-                        </p>
+
+                        <h3 class="proyecto-titulo"><?php echo $p['titulo']; ?></h3>
+                        <p class="proyecto-desc"><?php echo $p['descripcion']; ?></p>
                         
                         <div class="tech-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">JavaScript ES6</span>
-                            <span class="tag">Gestión de Roles</span>
-                            <span class="tag">Reportes & Finanzas</span>
+                            <?php foreach ($p['tags'] as $tag): ?>
+                                <span class="tag"><?php echo $tag; ?></span>
+                            <?php endforeach; ?>
                         </div>
 
                         <div class="proyecto-footer">
-                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/controlphone.png', 'ControlPhone - Sistema de Stock y Ventas')">
-                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
+                            <button class="btn-accion-proyecto" onclick="abrirGaleriaProyecto('<?php echo $p['id']; ?>', 0)">
+                                <i class="fa-solid fa-images"></i> 
+                                <span>Ver Galería <?php echo $totalFotos > 1 ? "($totalFotos fotos)" : ""; ?></span>
                             </button>
                         </div>
                     </div>
+
+                    <!-- Datos JSON embebidos para la galería interactiva JS -->
+                    <script type="application/json" id="data-galeria-<?php echo $p['id']; ?>">
+                        <?php echo json_encode([
+                            'id' => $p['id'],
+                            'titulo' => $p['titulo'],
+                            'imagenes' => $p['imagenes']
+                        ]); ?>
+                    </script>
                 </article>
-
-                <!-- Proyecto 2: Martinikova -->
-                <article class="proyecto-card reveal-fade" data-categoria="ecommerce">
-                    <div class="proyecto-preview" onclick="abrirLightbox('img/martinikova.png', 'Martinikova - Tienda Online de Indumentaria')">
-                        <img src="img/martinikova.png" alt="Tienda Online Martinikova" loading="lazy">
-                        <div class="proyecto-overlay">
-                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
-                        </div>
-                    </div>
-                    <div class="proyecto-info">
-                        <div class="proyecto-header-info">
-                            <span class="badge-cat"><i class="fa-solid fa-bag-shopping"></i> E-Commerce & Retail</span>
-                            <span class="badge-estado">En Producción</span>
-                        </div>
-                        <h3 class="proyecto-titulo">Martinikova: Plataforma E-Commerce con Panel Administrativo</h3>
-                        <p class="proyecto-desc">
-                            Tienda en línea orientada a indumentaria con catálogo dinámico optimizado para móviles y escritorio. Incluye carrito ágil, checkout intuitivo y un panel de administración para gestión de stock, pedidos y precios en tiempo real.
-                        </p>
-                        
-                        <div class="tech-tags">
-                            <span class="tag">E-Commerce</span>
-                            <span class="tag">PHP</span>
-                            <span class="tag">Panel Admin</span>
-                            <span class="tag">UX Mobile-First</span>
-                            <span class="tag">Catálogo Dinámico</span>
-                        </div>
-
-                        <div class="proyecto-footer">
-                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/martinikova.png', 'Martinikova - Tienda Online')">
-                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Proyecto 3: Sistema Directores -->
-                <article class="proyecto-card reveal-fade" data-categoria="institucional">
-                    <div class="proyecto-preview" onclick="abrirLightbox('img/directores.png', 'Sistema Directores - DGISE')">
-                        <img src="img/directores.png" alt="Sistema Directores DGISE" loading="lazy">
-                        <div class="proyecto-overlay">
-                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
-                        </div>
-                    </div>
-                    <div class="proyecto-info">
-                        <div class="proyecto-header-info">
-                            <span class="badge-cat"><i class="fa-solid fa-building-columns"></i> Gestión Gubernamental</span>
-                            <span class="badge-estado">Sector Público</span>
-                        </div>
-                        <h3 class="proyecto-titulo">Sistema Directores: Gestión Docente e Institucional</h3>
-                        <p class="proyecto-desc">
-                            Plataforma de administración y trazabilidad de docentes en escuelas provinciales. Desarrollado en el marco de la <strong>Dirección General de Informática de Santiago del Estero (DGISE)</strong>, asegurando alta disponibilidad y manejo estructurado de datos.
-                        </p>
-                        
-                        <div class="tech-tags">
-                            <span class="tag">PHP / Backend</span>
-                            <span class="tag">Bases de Datos Relacionales</span>
-                            <span class="tag">Seguridad de Datos</span>
-                            <span class="tag">DGISE</span>
-                        </div>
-
-                        <div class="proyecto-footer">
-                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/directores.png', 'Sistema Directores - DGISE')">
-                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Proyecto 4: Gestión de Vencimientos -->
-                <article class="proyecto-card reveal-fade" data-categoria="saas">
-                    <div class="proyecto-preview" onclick="abrirLightbox('img/vencimientos.png', 'Gestión de Vencimientos para Estudios Contables')">
-                        <img src="img/vencimientos.png" alt="Gestión de Vencimientos" loading="lazy">
-                        <div class="proyecto-overlay">
-                            <span class="btn-ver-imagen"><i class="fa-solid fa-expand"></i> Ampliar Captura</span>
-                        </div>
-                    </div>
-                    <div class="proyecto-info">
-                        <div class="proyecto-header-info">
-                            <span class="badge-cat"><i class="fa-solid fa-calculator"></i> FinTech & Legal / Contable</span>
-                            <span class="badge-estado">En Producción</span>
-                        </div>
-                        <h3 class="proyecto-titulo">Gestión de Vencimientos & Claves para Estudios Contables</h3>
-                        <p class="proyecto-desc">
-                            Software especializado para contadores y estudios fiscales. Automatiza el calendario de vencimientos impositivos de clientes, envía notificaciones automáticas y opera como un gestor seguro de credenciales y accesos de servicios fiscales.
-                        </p>
-                        
-                        <div class="tech-tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">Automatización</span>
-                            <span class="tag">Notificaciones</span>
-                            <span class="tag">Bóveda de Claves Seguras</span>
-                            <span class="tag">Control Fiscal</span>
-                        </div>
-
-                        <div class="proyecto-footer">
-                            <button class="btn-accion-proyecto" onclick="abrirLightbox('img/vencimientos.png', 'Gestión de Vencimientos Contables')">
-                                <i class="fa-solid fa-images"></i> Ver Detalles Visuales
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -622,13 +629,35 @@
         </div>
     </footer>
 
-    <!-- MODAL LIGHTBOX PARA PROYECTOS -->
+    <!-- MODAL LIGHTBOX MULTI-IMAGEN PARA PROYECTOS -->
     <div id="lightboxModal" class="lightbox-modal" aria-hidden="true" role="dialog">
         <div class="lightbox-overlay" id="lightboxOverlay"></div>
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar modal">&times;</button>
-            <img id="lightboxImg" src="" alt="Vista previa del proyecto">
-            <p id="lightboxCaption" class="lightbox-caption"></p>
+            
+            <!-- Barra superior del modal -->
+            <div class="lightbox-header">
+                <h4 id="lightboxTitulo" class="lightbox-titulo">Proyecto</h4>
+                <span id="lightboxContador" class="lightbox-contador">1 / 1</span>
+            </div>
+
+            <!-- Contenedor de Imagen con Flechas de Navegación -->
+            <div class="lightbox-slider-wrap">
+                <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Imagen anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                
+                <div class="lightbox-img-holder">
+                    <img id="lightboxImg" src="" alt="Vista previa del proyecto">
+                </div>
+
+                <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Imagen siguiente">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Tira de Miniaturas del Modal -->
+            <div class="lightbox-thumbnails" id="lightboxThumbs"></div>
         </div>
     </div>
 
