@@ -14,8 +14,8 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'Sistema de gestión integral diseñado para comercios de tecnología y accesorios. Permite control de inventario en tiempo real, registro de ventas rápidas, gestión de permisos (Administrador y Empleados) y módulo analítico con balance financiero diario, semanal y mensual.',
         'imagenes' => [
-            'img/controlphone/foto1.png',
-            'img/controlphone/foto2.png',
+            'img/controlphone/foto1.webp',
+            'img/controlphone/foto2.webp',
             'img/controlphone/panel_admin.webp',
             'img/controlphone/modal_venta.webp',
             'img/controlphone/pagos_combinados.webp',
@@ -37,12 +37,12 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'Tienda en línea orientada a indumentaria con catálogo dinámico optimizado para móviles y escritorio. Incluye carrito ágil, checkout intuitivo y un panel de administración para gestión de stock, pedidos y precios en tiempo real.',
         'imagenes' => [
-            'img/martinikova/foto1.png',
-            'img/martinikova/foto6.png',
-            'img/martinikova/foto7.png',
-            'img/martinikova/foto3.png',
-            'img/martinikova/foto4.png',
-            'img/martinikova/foto2.jpeg',
+            'img/martinikova/foto1.webp',
+            'img/martinikova/foto6.webp',
+            'img/martinikova/foto7.webp',
+            'img/martinikova/foto3.webp',
+            'img/martinikova/foto4.webp',
+            'img/martinikova/foto2.webp',
 
         ],
         'tags' => ['E-Commerce', 'PHP', 'Panel Admin', 'UX Mobile-First', 'Catálogo Dinámico']
@@ -56,11 +56,11 @@ $proyectos = [
         'estado' => 'Sector Público',
         'descripcion' => 'Plataforma de administración y trazabilidad de docentes en escuelas provinciales. Desarrollado en el marco de la Dirección General de Informática de Santiago del Estero (DGISE), asegurando alta disponibilidad y manejo estructurado de datos.',
         'imagenes' => [
-            'img/directores/foto1.png',
-            'img/directores/foto2.png',
-            'img/directores/foto3.png',
+            'img/directores/foto1.webp',
+            'img/directores/foto2.webp',
+            'img/directores/foto3.webp',
 
-            // 'img/directores_escuelas.png',
+            // 'img/directores_escuelas.webp',
         ],
         'tags' => ['PHP / Backend', 'Bases de Datos Relacionales', 'Seguridad de Datos', 'DGISE']
     ],
@@ -74,14 +74,14 @@ $proyectos = [
         'descripcion' => 'Software especializado para contadores y estudios fiscales. Automatiza el calendario de vencimientos impositivos de clientes, envía notificaciones automáticas y opera como un gestor seguro de credenciales y accesos de servicios fiscales.',
         'imagenes' => [
             // hasta la foto 7
-            'img/vencimientos/foto1.png',
-            'img/vencimientos/foto2.png',
-            'img/vencimientos/foto3.png',
-            'img/vencimientos/foto4.png',
-            'img/vencimientos/foto5.png',
-            'img/vencimientos/foto6.png',
-            'img/vencimientos/foto7.png',
-            // 'img/vencimientos_calendario.png',
+            'img/vencimientos/foto1.webp',
+            'img/vencimientos/foto2.webp',
+            'img/vencimientos/foto3.webp',
+            'img/vencimientos/foto4.webp',
+            'img/vencimientos/foto5.webp',
+            'img/vencimientos/foto6.webp',
+            'img/vencimientos/foto7.webp',
+            // 'img/vencimientos_calendario.webp',
         ],
         'tags' => ['PHP', 'Automatización', 'Notificaciones', 'Bóveda de Claves Seguras', 'Control Fiscal']
     ],
@@ -95,14 +95,14 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'SushiYa es una plataforma de pedidos online pensada para restaurantes de sushi. Los clientes navegan el menú, arman su carrito y hacen su pedido en minutos, eligiendo entre delivery o retiro, el horario que más les convenga y cómo van a pagar. El dueño del negocio gestiona todo desde un panel de administración simple e intuitivo: recibe los pedidos en tiempo real, administra el menú, registra gastos y consulta estadísticas reales de ventas. Tambien tiene la posibilidad de abrir o cerrar el local con un solo clic',
         'imagenes' => [
-            'img/sushiya/foto1.png',
-            'img/sushiya/foto2.png',
-            'img/sushiya/foto3.png',
-            'img/sushiya/foto4.png',
-            'img/sushiya/foto5.png',
-            'img/sushiya/foto6.png',
-            'img/sushiya/foto7.png',
-            'img/sushiya/foto8.png',
+            'img/sushiya/foto1.webp',
+            'img/sushiya/foto2.webp',
+            'img/sushiya/foto3.webp',
+            'img/sushiya/foto4.webp',
+            'img/sushiya/foto5.webp',
+            'img/sushiya/foto6.webp',
+            'img/sushiya/foto7.webp',
+            'img/sushiya/foto8.webp',
 
 
         ],
@@ -117,15 +117,15 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'Plataforma web full stack orientada a la venta de accesorios premium de iPhone y gestión comercial centralizada. Integra tienda online responsive con carrito, checkout simplificado con integración de pagos vía Mercado Pago, panel de administración con métricas financieras y reportes analíticos por rango de fechas, gestión dinámica de stock y pedidos, y autenticación segura con recuperación de clave vía correo SMTP.',
         'imagenes' => [
-            'img/itools/foto1.png',
-            'img/itools/foto2.png',
-            'img/itools/foto3.png',
-            'img/itools/foto4.png',
-            'img/itools/foto5.png',
-            'img/itools/foto6.png',
-            'img/itools/foto7.png',
-            'img/itools/foto8.png',
-            'img/itools/foto9.png',
+            'img/itools/foto1.webp',
+            'img/itools/foto2.webp',
+            'img/itools/foto3.webp',
+            'img/itools/foto4.webp',
+            'img/itools/foto5.webp',
+            'img/itools/foto6.webp',
+            'img/itools/foto7.webp',
+            'img/itools/foto8.webp',
+            'img/itools/foto9.webp',
 
 
 
@@ -173,7 +173,7 @@ $proyectos = [
     <header class="header" id="navbar">
         <div class="contenedor-header">
             <a href="#inicio" class="marca-logo" aria-label="Ir al inicio">
-                <img src="img/logo.png" alt="Logo JASDEV" class="logo-img">
+                <img src="img/logo.webp" alt="Logo JASDEV" class="logo-img">
                 <div class="marca-texto">
                     <span class="nombre-autor">Amir Seade</span>
                     <span class="badge-marca">JASDEV</span>
@@ -461,7 +461,7 @@ $proyectos = [
                 <div class="habilidad-card reveal-fade">
                     <div class="habilidad-header">
                         <div class="habilidad-icon-wrap">
-                            <img src="img/software-development.png" alt="Desarrollo Web" class="habilidad-img">
+                            <img src="img/software-development.webp" alt="Desarrollo Web" class="habilidad-img">
                         </div>
                         <div>
                             <h3>Desarrollo Frontend & Backend</h3>
@@ -488,7 +488,7 @@ $proyectos = [
                 <div class="habilidad-card reveal-fade">
                     <div class="habilidad-header">
                         <div class="habilidad-icon-wrap">
-                            <img src="img/chip-de-ia.png" alt="Inteligencia Artificial" class="habilidad-img">
+                            <img src="img/chip-de-ia.webp" alt="Inteligencia Artificial" class="habilidad-img">
                         </div>
                         <div>
                             <h3>Inteligencia Artificial & Bots</h3>
@@ -515,7 +515,7 @@ $proyectos = [
                 <div class="habilidad-card reveal-fade">
                     <div class="habilidad-header">
                         <div class="habilidad-icon-wrap">
-                            <img src="img/e-commerce.png" alt="E-Commerce" class="habilidad-img">
+                            <img src="img/e-commerce.webp" alt="E-Commerce" class="habilidad-img">
                         </div>
                         <div>
                             <h3>E-Commerce & Gestión Comercial</h3>
@@ -698,7 +698,7 @@ $proyectos = [
         <div class="contenedor footer-contenedor">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <img src="img/logo.png" alt="JASDEV Logo" class="footer-logo-img">
+                    <img src="img/logo.webp" alt="JASDEV Logo" class="footer-logo-img">
                     <span class="footer-logo-text">Amir Seade <small>| JASDEV</small></span>
                 </div>
                 <p class="footer-copy">
