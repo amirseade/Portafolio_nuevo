@@ -22,7 +22,7 @@ $proyectos = [
             'img/controlphone/caja_desglose.webp',
             'img/controlphone/panel_ventas.webp',
             'img/controlphone/estadisticas_view.webp',
-            'img/controlphone/configuracion_sisteama.webp',
+            'img/controlphone/config.webp',
             'img/controlphone/bot_cotizador.webp',
             
         ],
@@ -58,7 +58,10 @@ $proyectos = [
         'estado' => 'Sector Público',
         'descripcion' => 'Plataforma de administración y trazabilidad de docentes en escuelas provinciales. Desarrollado en el marco de la Dirección General de Informática de Santiago del Estero (DGISE), asegurando alta disponibilidad y manejo estructurado de datos.',
         'imagenes' => [
-            'img/directores.png'
+            'img/directores/foto1.png',
+            'img/directores/foto2.png',
+            'img/directores/foto3.png',
+            
             // 'img/directores_escuelas.png',
         ],
         'tags' => ['PHP / Backend', 'Bases de Datos Relacionales', 'Seguridad de Datos', 'DGISE']
@@ -72,7 +75,14 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'Software especializado para contadores y estudios fiscales. Automatiza el calendario de vencimientos impositivos de clientes, envía notificaciones automáticas y opera como un gestor seguro de credenciales y accesos de servicios fiscales.',
         'imagenes' => [
-            'img/vencimientos.png'
+            // hasta la foto 7
+            'img/vencimientos/foto1.png',
+            'img/vencimientos/foto2.png',
+            'img/vencimientos/foto3.png',
+            'img/vencimientos/foto4.png',
+            'img/vencimientos/foto5.png',
+            'img/vencimientos/foto6.png',
+            'img/vencimientos/foto7.png',
             // 'img/vencimientos_calendario.png',
         ],
         'tags' => ['PHP', 'Automatización', 'Notificaciones', 'Bóveda de Claves Seguras', 'Control Fiscal']
