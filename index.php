@@ -24,7 +24,7 @@ $proyectos = [
             'img/controlphone/estadisticas_view.webp',
             'img/controlphone/config.webp',
             'img/controlphone/bot_cotizador.webp',
-            
+
         ],
         'tags' => ['PHP', 'MySQL', 'JavaScript ES6', 'Gestión de Roles', 'Reportes & Finanzas']
     ],
@@ -43,9 +43,7 @@ $proyectos = [
             'img/martinikova/foto3.png',
             'img/martinikova/foto4.png',
             'img/martinikova/foto2.jpeg',
-            
-            // 'img/martinikova_catalogo.png',
-            // 'img/martinikova_admin.png',
+
         ],
         'tags' => ['E-Commerce', 'PHP', 'Panel Admin', 'UX Mobile-First', 'Catálogo Dinámico']
     ],
@@ -61,7 +59,7 @@ $proyectos = [
             'img/directores/foto1.png',
             'img/directores/foto2.png',
             'img/directores/foto3.png',
-            
+
             // 'img/directores_escuelas.png',
         ],
         'tags' => ['PHP / Backend', 'Bases de Datos Relacionales', 'Seguridad de Datos', 'DGISE']
@@ -86,7 +84,31 @@ $proyectos = [
             // 'img/vencimientos_calendario.png',
         ],
         'tags' => ['PHP', 'Automatización', 'Notificaciones', 'Bóveda de Claves Seguras', 'Control Fiscal']
+    ],
+
+    [
+        'id' => 'sushiya',
+        'titulo' => 'SushiYa: Sistema de Gestión para Negocios de Comida con Pedidos Web',
+        'categoria' => 'saas',
+        'categoria_label' => 'SaaS / Gestión Comercial',
+        'categoria_icono' => 'fa-brands fa-apple',
+        'estado' => 'En Producción',
+        'descripcion' => 'SushiYa es una plataforma de pedidos online pensada para restaurantes de sushi. Los clientes navegan el menú, arman su carrito y hacen su pedido en minutos, eligiendo entre delivery o retiro, el horario que más les convenga y cómo van a pagar. El dueño del negocio gestiona todo desde un panel de administración simple e intuitivo: recibe los pedidos en tiempo real, administra el menú, registra gastos y consulta estadísticas reales de ventas. Tambien tiene la posibilidad de abrir o cerrar el local con un solo clic',
+        'imagenes' => [
+            'img/sushiya/foto1.png',
+            'img/sushiya/foto2.png',
+            'img/sushiya/foto3.png',
+            'img/sushiya/foto4.png',
+            'img/sushiya/foto5.png',
+            'img/sushiya/foto6.png',
+            'img/sushiya/foto7.png',
+            'img/sushiya/foto8.png',
+
+
+        ],
+        'tags' => ['PHP', 'MySQL', 'JavaScript ES6', 'Gestión de Roles', 'Reportes & Finanzas']
     ]
+
 ];
 ?>
 <!DOCTYPE html>
@@ -391,12 +413,12 @@ $proyectos = [
 
                         <!-- Datos JSON embebidos para la galería interactiva JS -->
                         <script type="application/json" id="data-galeria-<?php echo $p['id']; ?>">
-                            <?php echo json_encode([
-                                'id' => $p['id'],
-                                'titulo' => $p['titulo'],
-                                'imagenes' => $p['imagenes']
-                            ]); ?>
-                        </script>
+                                <?php echo json_encode([
+                                    'id' => $p['id'],
+                                    'titulo' => $p['titulo'],
+                                    'imagenes' => $p['imagenes']
+                                ]); ?>
+                            </script>
                     </article>
                 <?php endforeach; ?>
             </div>
