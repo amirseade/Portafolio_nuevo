@@ -853,10 +853,16 @@ ul {
 .proyecto-thumbnails-bar {
     display: flex;
     gap: 0.45rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.55rem 0.8rem;
     background: rgba(8, 12, 20, 0.6);
     border-bottom: 1px solid var(--border-color);
     overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE y Edge */
+}
+
+.proyecto-thumbnails-bar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
 }
 
 .thumb-btn {
@@ -1676,6 +1682,12 @@ ul {
     overflow-x: auto;
     padding-top: 0.65rem;
     border-top: 1px solid var(--border-color);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.lightbox-thumbnails::-webkit-scrollbar {
+    display: none;
 }
 
 .lightbox-thumb-btn {
