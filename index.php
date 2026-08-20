@@ -107,6 +107,30 @@ $proyectos = [
 
         ],
         'tags' => ['PHP', 'MySQL', 'JavaScript ES6', 'Gestión de Roles', 'Reportes & Finanzas']
+    ],
+    [
+        'id' => 'itools',
+        'titulo' => 'iTools: Plataforma E-Commerce & Sistema de Gestión Integral',
+        'categoria' => 'ecommerce',
+        'categoria_label' => 'E-Commerce & Gestión',
+        'categoria_icono' => 'fa-solid fa-mobile-screen-button',
+        'estado' => 'En Producción',
+        'descripcion' => 'Plataforma web full stack orientada a la venta de accesorios premium de iPhone y gestión comercial centralizada. Integra tienda online responsive con carrito, checkout simplificado con integración de pagos vía Mercado Pago, panel de administración con métricas financieras y reportes analíticos por rango de fechas, gestión dinámica de stock y pedidos, y autenticación segura con recuperación de clave vía correo SMTP.',
+        'imagenes' => [
+            'img/itools/foto1.png',
+            'img/itools/foto2.png',
+            'img/itools/foto3.png',
+            'img/itools/foto4.png',
+            'img/itools/foto5.png',
+            'img/itools/foto6.png',
+            'img/itools/foto7.png',
+            'img/itools/foto8.png',
+            'img/itools/foto9.png',
+
+
+
+        ],
+        'tags' => ['PHP', 'MySQL', 'JavaScript ES6', 'Mercado Pago', 'SMTP', 'Panel Admin']
     ]
 
 ];
