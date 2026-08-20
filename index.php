@@ -37,7 +37,13 @@ $proyectos = [
         'estado' => 'En Producción',
         'descripcion' => 'Tienda en línea orientada a indumentaria con catálogo dinámico optimizado para móviles y escritorio. Incluye carrito ágil, checkout intuitivo y un panel de administración para gestión de stock, pedidos y precios en tiempo real.',
         'imagenes' => [
-            'img/martinikova.png'
+            'img/martinikova/foto1.png',
+            'img/martinikova/foto6.png',
+            'img/martinikova/foto7.png',
+            'img/martinikova/foto3.png',
+            'img/martinikova/foto4.png',
+            'img/martinikova/foto2.jpeg',
+            
             // 'img/martinikova_catalogo.png',
             // 'img/martinikova_admin.png',
         ],
