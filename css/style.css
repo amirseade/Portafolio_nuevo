@@ -1894,6 +1894,15 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    .filtros-proyectos {
+        gap: 0.45rem;
+    }
+
+    .btn-filtro {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.8rem;
+    }
+
     .footer-contenedor {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1951,6 +1960,7 @@ ul {
 
     .lightbox-content {
         padding: 0.85rem;
+        max-height: 92vh;
     }
 
     .lightbox-header {
@@ -1958,11 +1968,22 @@ ul {
     }
 
     .lightbox-img-holder img {
-        max-height: 45vh;
+        max-height: 42vh;
     }
 }
 
-/* 4. Móviles Ultra Pequeños (340px y menores como Galaxy Fold) */
+/* 4. Modo Apaisado / Horizontal en móviles (Landscape) */
+@media (max-height: 520px) and (orientation: landscape) {
+    .lightbox-img-holder img {
+        max-height: 38vh;
+    }
+    .lightbox-content {
+        max-height: 96vh;
+        overflow-y: auto;
+    }
+}
+
+/* 5. Móviles Ultra Pequeños (340px y menores como Galaxy Fold) */
 @media (max-width: 340px) {
     .nombre-autor {
         display: none;
@@ -1973,11 +1994,16 @@ ul {
     }
 
     .hero-title {
-        font-size: 1.65rem;
+        font-size: 1.55rem;
     }
 
     .btn {
-        padding: 0.7rem 1rem;
-        font-size: 0.85rem;
+        padding: 0.7rem 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    .btn-ver-imagen {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.85rem;
     }
 }

@@ -43,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- 1. MENÚ MÓVIL TOGGLE ---
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navMenu.classList.toggle('menu-abierto');
             const icon = menuToggle.querySelector('i');
             if (navMenu.classList.contains('menu-abierto')) {
@@ -65,6 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     icon.classList.add('fa-bars-staggered');
                 }
             });
+        });
+
+        // Cerrar menú al hacer clic fuera del header/menú
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('menu-abierto') && !navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('menu-abierto');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars-staggered');
+                }
+            }
         });
     }
 
@@ -275,6 +288,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowRight') cambiarImagenModal('next');
         if (e.key === 'ArrowLeft') cambiarImagenModal('prev');
     });
+
+    // Gestos táctiles (Swipe) en la galería para móviles
+    const sliderWrap = document.querySelector('.lightbox-slider-wrap');
+    if (sliderWrap) {
+        let touchStartX = 0;
+
+        sliderWrap.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+                touchStartX = e.touches[0].clientX;
+            }
+        }, { passive: true });
+
+        sliderWrap.addEventListener('touchend', (e) => {
+            if (e.changedTouches.length === 1) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diffX = touchStartX - touchEndX;
+                if (Math.abs(diffX) > 40) {
+                    if (diffX > 0) {
+                        cambiarImagenModal('next');
+                    } else {
+                        cambiarImagenModal('prev');
+                    }
+                }
+            }
+        }, { passive: true });
+    }
 
     // --- 6. COPIAR EMAIL CON TOAST FEEDBACK ---
     const mostrarToast = (mensaje) => {

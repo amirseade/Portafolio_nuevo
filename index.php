@@ -233,11 +233,6 @@ $proyectos = [
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>Contactar al instante</span>
                     </a>
-                    <button class="btn btn-outline" id="btnCopiarEmailHero" data-email="amirseade00@gmail.com"
-                        title="Copiar correo">
-                        <i class="fa-regular fa-copy"></i>
-                        <span id="textoCopiarHero">Copiar Email</span>
-                    </button>
                 </div>
 
                 <!-- Ubicación & Enlaces Rápidos -->
@@ -254,7 +249,7 @@ $proyectos = [
                         <a href="mailto:amirseade00@gmail.com" aria-label="Email" class="social-pill">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
-                        <a href="https://www.instagram.com/amirseade" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/jasdev.site" target="_blank" rel="noopener noreferrer"
                             aria-label="Instagram" class="social-pill">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
@@ -265,7 +260,7 @@ $proyectos = [
             <!-- Métricas / Social Proof Card -->
             <div class="hero-metrics-card reveal-scale">
                 <div class="metric-box">
-                    <div class="metric-number"><span class="counter" data-target="15">15</span>+</div>
+                    <div class="metric-number"><span class="counter" data-target="6">6</span>+</div>
                     <div class="metric-label">Proyectos Web Entregados</div>
                 </div>
                 <div class="metric-divider"></div>
@@ -275,7 +270,7 @@ $proyectos = [
                 </div>
                 <div class="metric-divider"></div>
                 <div class="metric-box">
-                    <div class="metric-number"><span class="counter" data-target="4">4</span>+</div>
+                    <div class="metric-number"><span class="counter" data-target="3">3</span>+</div>
                     <div class="metric-label">Años de Experiencia</div>
                 </div>
             </div>
