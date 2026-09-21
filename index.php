@@ -161,6 +161,18 @@ $proyectos = [
     <!-- Font Awesome 6 Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Script de Inicialización Temprana de Tema (Evita parpadeos de color) -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('jasdev_theme');
+                const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = savedTheme ? savedTheme : (systemDark ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch(e) {}
+        })();
+    </script>
+
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -169,7 +181,7 @@ $proyectos = [
     <!-- Elemento ancla superior -->
     <div id="inicio"></div>
 
-    <!-- Header & Navegación Flotante Glassmorphism -->
+    <!-- Header & Navegación Flotante -->
     <header class="header" id="navbar">
         <div class="contenedor-header">
             <a href="#inicio" class="marca-logo" aria-label="Ir al inicio">
@@ -180,10 +192,19 @@ $proyectos = [
                 </div>
             </a>
 
-            <!-- Botón Hamburguesa Móvil -->
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
-                <i class="fa-solid fa-bars-staggered"></i>
-            </button>
+            <!-- Controles de la derecha: Theme Toggle & Menú -->
+            <div class="header-controls">
+                <!-- Botón Selector de Tema Claro / Oscuro -->
+                <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Cambiar tema de color" title="Alternar modo claro / oscuro">
+                    <i class="fa-solid fa-sun icon-sun" aria-hidden="true"></i>
+                    <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+                </button>
+
+                <!-- Botón Hamburguesa Móvil -->
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú de navegación">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
 
             <!-- Menú de Navegación -->
             <nav class="navegacion" id="navMenu">
@@ -200,26 +221,26 @@ $proyectos = [
         </div>
     </header>
 
-    <!-- HERO SECTION: Alto impacto para contratadores -->
+    <!-- HERO SECTION: Diseño limpio, minimalista y directo -->
     <section class="hero-section">
-        <div class="hero-ambient-glow"></div>
+        <div class="hero-background-pattern"></div>
         <div class="contenedor hero-contenedor">
             <div class="hero-content">
-                <!-- Badge de disponibilidad -->
+                <!-- Status Badge -->
                 <div class="status-badge reveal-fade">
                     <span class="status-dot"></span>
-                    <span>Disponible para proyectos & oportunidades</span>
+                    <span>Disponible para proyectos</span>
                 </div>
 
+                <!-- Título Directo -->
                 <h1 class="hero-title reveal-fade">
-                    Transformando ideas complejas en <span class="gradient-text">software web de alto rendimiento</span>
-                    y diseño intuitivo.
+                    Desarrollo de Software Web <br>
+                    <span class="highlight-text">& Sistemas a Medida</span>
                 </h1>
 
+                <!-- Subtítulo Corto y Conciso -->
                 <p class="hero-subtitle reveal-fade">
-                    Hola, soy <strong>Amir Seade</strong>. Desarrollador Full Stack & Diseñador de Interfaces en
-                    <strong>JASDEV</strong>. Construyo plataformas a medida, sistemas de gestión escalables, tiendas
-                    online y soluciones potenciadas con IA para hacer crecer negocios.
+                    Hola, soy <strong>Amir Seade</strong>. Construyo plataformas SaaS, sistemas de gestión y e-commerce con foco en estabilidad, rendimiento y usabilidad.
                 </p>
 
                 <!-- Acciones Principales -->
@@ -228,64 +249,42 @@ $proyectos = [
                         <i class="fa-solid fa-layer-group"></i>
                         <span>Ver Proyectos</span>
                     </a>
-                    <a href="https://wa.me/3855724467?text=Hola%20Amir,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20una%20oportunidad"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                    <a href="https://wa.me/3855724467?text=Hola%20Amir,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <span>Contactar al instante</span>
+                        <span>Contactar</span>
                     </a>
                 </div>
 
-                <!-- Ubicación & Enlaces Rápidos -->
-                <div class="hero-meta reveal-fade">
-                    <div class="meta-item">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>Santiago del Estero, Argentina <small>(Remoto Global)</small></span>
+                <!-- Tira de Métricas Compacta y Elegante -->
+                <div class="hero-metrics-strip reveal-scale">
+                    <div class="metric-item">
+                        <span class="metric-val"><span class="counter" data-target="6">6</span>+</span>
+                        <span class="metric-txt">Sistemas en Producción</span>
                     </div>
-                    <div class="social-quick-links">
-                        <a href="https://wa.me/3855724467" target="_blank" rel="noopener noreferrer"
-                            aria-label="WhatsApp" class="social-pill">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="mailto:amirseade00@gmail.com" aria-label="Email" class="social-pill">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <a href="https://www.instagram.com/jasdev.site" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram" class="social-pill">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
+                    <span class="metric-sep">/</span>
+                    <div class="metric-item">
+                        <span class="metric-val">Full Stack</span>
+                        <span class="metric-txt">PHP & MySQL</span>
                     </div>
-                </div>
-            </div>
-
-            <!-- Métricas / Social Proof Card -->
-            <div class="hero-metrics-card reveal-scale">
-                <div class="metric-box">
-                    <div class="metric-number"><span class="counter" data-target="6">6</span>+</div>
-                    <div class="metric-label">Proyectos Web Entregados</div>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-box">
-                    <div class="metric-number"><span class="counter" data-target="100">100</span>%</div>
-                    <div class="metric-label">Compromiso & Calidad</div>
-                </div>
-                <div class="metric-divider"></div>
-                <div class="metric-box">
-                    <div class="metric-number"><span class="counter" data-target="3">3</span>+</div>
-                    <div class="metric-label">Años de Experiencia</div>
+                    <span class="metric-sep">/</span>
+                    <div class="metric-item">
+                        <span class="metric-val"><span class="counter" data-target="3">3</span>+ Años</span>
+                        <span class="metric-txt">Experiencia</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN: SOBRE MÍ / VALOR PARA EL CONTRATADOR -->
+    <!-- SECCIÓN: SOBRE MÍ / ENFOQUE DE TRABAJO -->
     <section class="seccion sobre-mi-seccion" id="sobre-mi">
         <div class="contenedor">
             <div class="seccion-header">
-                <span class="seccion-tag"><i class="fa-solid fa-user-check"></i> Propuesta de Valor</span>
-                <h2 class="seccion-titulo">¿Por qué trabajar conmigo?</h2>
+                <span class="seccion-tag"><i class="fa-solid fa-code-commit"></i> Metodología & Enfoque</span>
+                <h2 class="seccion-titulo">Soluciones técnicas pensadas para el negocio</h2>
                 <p class="seccion-subtitulo">
-                    Combino rigor técnico de ingeniería con sensibilidad visual para crear productos digitales que no
-                    solo se ven profesionales, sino que generan resultados comerciales medibles.
+                    Construyo software combinando criterio de ingeniería, interfaces intuitivas y código mantenible para resolver problemas reales en empresas y comercios.
                 </p>
             </div>
 
@@ -293,45 +292,42 @@ $proyectos = [
                 <!-- Pilar 1 -->
                 <div class="pilar-card reveal-fade">
                     <div class="pilar-icono">
-                        <i class="fa-solid fa-code"></i>
+                        <i class="fa-solid fa-database"></i>
                     </div>
-                    <h3>Arquitectura Robusta & Código Limpio</h3>
-                    <p>Desarrollo backend y frontend estructurado, modular y preparado para escalar sin generar deuda
-                        técnica innecesaria.</p>
+                    <h3>Arquitectura Backend & Datos</h3>
+                    <p>Desarrollo estructurado en PHP y bases de datos relacionales MySQL, optimizado para consistencia de datos, seguridad de sesiones y roles de usuario.</p>
                     <ul class="pilar-features">
-                        <li><i class="fa-solid fa-check"></i> PHP / MySQL / JavaScript modular</li>
-                        <li><i class="fa-solid fa-check"></i> Seguridad en control de accesos y roles</li>
-                        <li><i class="fa-solid fa-check"></i> Rendimiento y carga rápida</li>
+                        <li><i class="fa-solid fa-check"></i> PHP / MySQL / Modelos relacionales</li>
+                        <li><i class="fa-solid fa-check"></i> Control estricto de roles y permisos</li>
+                        <li><i class="fa-solid fa-check"></i> Consultas optimizadas y balance financiero</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 2 -->
                 <div class="pilar-card reveal-fade">
                     <div class="pilar-icono">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
                     </div>
-                    <h3>Experiencia de Usuario (UI/UX) Excepcional</h3>
-                    <p>Diseño enfocado en la usabilidad, reduciendo la fricción para que los usuarios y clientes operen
-                        de forma intuitiva desde cualquier pantalla.</p>
+                    <h3>Interfaces Claras & Mobile-First</h3>
+                    <p>Diseño centrado en la usabilidad del operador y del cliente final. Reduzco fricciones visuales para que cada pantalla sea rápida, legible y fácil de usar.</p>
                     <ul class="pilar-features">
-                        <li><i class="fa-solid fa-check"></i> Interfaces 100% responsivas</li>
-                        <li><i class="fa-solid fa-check"></i> Jerarquía visual clara y moderna</li>
-                        <li><i class="fa-solid fa-check"></i> Micro-interacciones orientadas a conversión</li>
+                        <li><i class="fa-solid fa-check"></i> Experiencia fluida en móviles y escritorios</li>
+                        <li><i class="fa-solid fa-check"></i> Paneles de administración con filtros ágiles</li>
+                        <li><i class="fa-solid fa-check"></i> Componentes interactivos en JavaScript ES6</li>
                     </ul>
                 </div>
 
                 <!-- Pilar 3 -->
                 <div class="pilar-card reveal-fade">
                     <div class="pilar-icono">
-                        <i class="fa-solid fa-robot"></i>
+                        <i class="fa-solid fa-sliders"></i>
                     </div>
-                    <h3>Innovación con IA & Automatización</h3>
-                    <p>Integración de capacidades de Inteligencia Artificial para automatizar tareas repetitivas,
-                        atención al cliente y análisis de datos.</p>
+                    <h3>Automatización & Integraciones</h3>
+                    <p>Conexión de pasarelas de pago, envío de notificaciones automáticas y digitalización de flujos de trabajo repetitivos para ahorrar tiempo operativo.</p>
                     <ul class="pilar-features">
-                        <li><i class="fa-solid fa-check"></i> Asistentes y Chatbots inteligentes</li>
-                        <li><i class="fa-solid fa-check"></i> Notificaciones y recordatorios automáticos</li>
-                        <li><i class="fa-solid fa-check"></i> Optimización de flujos de negocio</li>
+                        <li><i class="fa-solid fa-check"></i> Pagos con Mercado Pago & pasarelas</li>
+                        <li><i class="fa-solid fa-check"></i> Notificaciones y control de vencimientos</li>
+                        <li><i class="fa-solid fa-check"></i> Integración práctica de asistentes y APIs</li>
                     </ul>
                 </div>
             </div>

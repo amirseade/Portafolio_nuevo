@@ -33,6 +33,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const botonesFiltro = document.querySelectorAll('.btn-filtro');
     const tarjetasProyectos = document.querySelectorAll('.proyecto-card');
     const seccionElements = document.querySelectorAll('section[id], div#inicio');
+    const themeToggle = document.getElementById('themeToggle');
+
+    // --- 0. SELECTOR DE TEMA CLARO / OSCURO ---
+    const applyTheme = (theme) => {
+        document.documentElement.setAttribute('data-theme', theme);
+        try {
+            localStorage.setItem('jasdev_theme', theme);
+        } catch(e) {}
+    };
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
+    }
+
+    // Escuchar preferencia del SO si no hay selección manual guardada
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('jasdev_theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+    }
 
     // Estado actual de la galería en el modal
     let galeriaActual = {
@@ -438,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const metricCard = document.querySelector('.hero-metrics-card');
+    const metricCard = document.querySelector('.hero-metrics-strip, .hero-metrics-card');
     if (metricCard && 'IntersectionObserver' in window) {
         const metricObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -447,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     animarContadores();
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.3 });
 
         metricObserver.observe(metricCard);
     }
