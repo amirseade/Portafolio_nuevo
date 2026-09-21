@@ -580,14 +580,14 @@ $proyectos = [
                             <i class="fa-regular fa-copy copy-icon-subtle"></i>
                         </div>
 
-                        <a href="https://www.instagram.com/amirseade" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.instagram.com/jasdev.site" target="_blank" rel="noopener noreferrer"
                             class="contacto-item-link">
                             <div class="contacto-item-icono instagram-bg">
                                 <i class="fa-brands fa-instagram"></i>
                             </div>
                             <div class="contacto-item-texto">
                                 <span class="contacto-item-label">Instagram</span>
-                                <span class="contacto-item-val">@amirseade</span>
+                                <span class="contacto-item-val">@jasdev.site</span>
                             </div>
                         </a>
 
